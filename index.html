@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>TECVEDEA — Building the Future Across Every Industry.</title>
 
     <meta name="description"
-        content="TECVEDEA is an innovation group focused on technology, science, engineering, and industry across multiple sectors.">
+        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines.">
 
     <meta name="theme-color" content="#000000">
 
@@ -27,14 +27,8 @@
         body {
             background: #000;
             color: #f5f5f5;
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Helvetica,
-                Arial,
-                sans-serif;
+            font-family: Inter, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -48,9 +42,9 @@
             display: block;
         }
 
-        /* ==============================
+        /* =========================
            HEADER
-        ============================== */
+        ========================= */
 
         header {
             position: fixed;
@@ -67,7 +61,6 @@
             max-width: 1380px;
             height: 78px;
             margin: auto;
-
             padding: 0 42px;
 
             display: flex;
@@ -86,71 +79,29 @@
         }
 
         .brand img {
-            width: 34px;
-            height: 34px;
+            width: 36px;
+            height: 36px;
             object-fit: contain;
-
-            /* STATIC — no animation */
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 30px;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 32px;
         }
 
         .nav-links a {
             color: #858585;
             font-size: 13px;
-            transition: color 0.2s ease;
+            transition: color .2s ease;
         }
 
         .nav-links a:hover {
             color: #fff;
         }
 
-        .social {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social a {
-            width: 34px;
-            height: 34px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid #292929;
-            border-radius: 50%;
-
-            color: #aaa;
-
-            transition:
-                border-color 0.2s ease,
-                color 0.2s ease;
-        }
-
-        .social a:hover {
-            color: #fff;
-            border-color: #666;
-        }
-
-        .social svg {
-            width: 15px;
-            height: 15px;
-            fill: currentColor;
-        }
-
-        /* ==============================
-           GLOBAL LAYOUT
-        ============================== */
+        /* =========================
+           LAYOUT
+        ========================= */
 
         .container {
             width: min(1380px, calc(100% - 84px));
@@ -172,7 +123,7 @@
         }
 
         .section-title {
-            max-width: 900px;
+            max-width: 950px;
 
             font-size: clamp(38px, 5.2vw, 72px);
             line-height: 1.02;
@@ -183,16 +134,16 @@
         }
 
         .section-description {
-            max-width: 720px;
+            max-width: 760px;
 
             color: #888;
             font-size: 17px;
             line-height: 1.85;
         }
 
-        /* ==============================
+        /* =========================
            HERO
-        ============================== */
+        ========================= */
 
         .hero {
             min-height: 100vh;
@@ -211,23 +162,18 @@
         .hero-logo {
             width: 150px;
             height: 150px;
-
             object-fit: contain;
 
             margin-bottom: 52px;
 
-            /* IMPORTANT:
-               No animation.
-               No transform.
-               No movement.
-            */
+            /* STATIC LOGO — NO ANIMATION */
         }
 
         .hero h1 {
             max-width: 1100px;
 
             font-size: clamp(52px, 8vw, 112px);
-            line-height: 0.98;
+            line-height: .98;
             letter-spacing: -6px;
             font-weight: 600;
 
@@ -239,61 +185,20 @@
         }
 
         .hero-description {
-            max-width: 760px;
+            max-width: 850px;
 
             color: #999;
             font-size: clamp(17px, 2vw, 21px);
             line-height: 1.75;
         }
 
-        .hero-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 42px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            min-height: 46px;
-            padding: 0 22px;
-
-            border: 1px solid #303030;
-
-            font-size: 13px;
-            font-weight: 600;
-
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .button-primary {
-            background: #fff;
-            color: #000;
-            border-color: #fff;
-        }
-
-        .button-primary:hover {
-            background: #ddd;
-            border-color: #ddd;
-        }
-
-        .button-secondary:hover {
-            background: #111;
-            border-color: #555;
-        }
-
-        /* ==============================
+        /* =========================
            ABOUT
-        ============================== */
+        ========================= */
 
         .about-grid {
             display: grid;
-            grid-template-columns: 0.7fr 1.3fr;
+            grid-template-columns: .7fr 1.3fr;
             gap: 100px;
         }
 
@@ -308,23 +213,22 @@
             margin-bottom: 24px;
         }
 
-        /* ==============================
-           FOCUS
-        ============================== */
+        /* =========================
+           CURRENT FOCUS
+        ========================= */
 
         .focus-grid {
-            margin-top: 75px;
+            margin-top: 70px;
 
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
 
             border-top: 1px solid #1a1a1a;
             border-left: 1px solid #1a1a1a;
         }
 
         .focus-item {
-            min-height: 230px;
-
+            min-height: 240px;
             padding: 35px;
 
             border-right: 1px solid #1a1a1a;
@@ -345,73 +249,65 @@
         }
 
         .focus-item p {
-            max-width: 480px;
-
             color: #777;
             font-size: 14px;
             line-height: 1.7;
         }
 
-        /* ==============================
-           SECTORS
-        ============================== */
+        /* =========================
+           FUTURE AREAS
+        ========================= */
 
-        .sector-list {
-            margin-top: 70px;
-            border-top: 1px solid #1a1a1a;
-        }
-
-        .sector-row {
-            min-height: 86px;
-
-            display: grid;
-            grid-template-columns: 80px 1fr auto;
-            align-items: center;
-
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        .sector-number {
-            color: #555;
-            font-size: 12px;
-        }
-
-        .sector-name {
-            font-size: 22px;
-            font-weight: 400;
-        }
-
-        .sector-note {
-            color: #666;
-            font-size: 12px;
-        }
-
-        /* ==============================
-           WORK / INITIATIVES
-        ============================== */
-
-        .work-header {
+        .future-intro {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            gap: 40px;
+            gap: 50px;
         }
 
-        .work-note {
-            max-width: 400px;
-
+        .future-note {
+            max-width: 430px;
             color: #666;
             font-size: 13px;
             line-height: 1.7;
         }
 
-        .work-list {
+        .future-list {
             margin-top: 70px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top: 1px solid #1a1a1a;
+            border-left: 1px solid #1a1a1a;
+        }
+
+        .future-item {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 25px;
+
+            border-right: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+
+            color: #aaa;
+            font-size: 15px;
+        }
+
+        /* =========================
+           WORK
+        ========================= */
+
+        .work-list {
+            margin-top: 65px;
             border-top: 1px solid #1a1a1a;
         }
 
         .work-item {
-            padding: 30px 0;
+            padding: 32px 0;
 
             display: grid;
             grid-template-columns: 1fr 200px;
@@ -421,16 +317,16 @@
         }
 
         .work-item h3 {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: 500;
-            margin-bottom: 8px;
+            margin-bottom: 9px;
         }
 
         .work-item p {
-            max-width: 700px;
-
+            max-width: 750px;
             color: #777;
             font-size: 14px;
+            line-height: 1.7;
         }
 
         .work-type {
@@ -439,9 +335,9 @@
             text-align: right;
         }
 
-        /* ==============================
+        /* =========================
            VISION
-        ============================== */
+        ========================= */
 
         .vision {
             padding-top: 170px;
@@ -461,38 +357,13 @@
             color: #666;
         }
 
-        /* ==============================
-           CONTACT
-        ============================== */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact .section-title {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact .section-description {
-            margin: auto;
-        }
-
-        .contact-actions {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        /* ==============================
+        /* =========================
            FOOTER
-        ============================== */
+        ========================= */
 
         footer {
             border-top: 1px solid #151515;
-            padding: 32px 0;
+            padding: 35px 0;
         }
 
         .footer-inner {
@@ -502,7 +373,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .footer-brand {
@@ -518,23 +389,24 @@
 
         .footer-links {
             display: flex;
-            gap: 20px;
+            gap: 22px;
         }
 
         .footer-links a {
             color: #666;
             font-size: 12px;
+            transition: color .2s ease;
         }
 
         .footer-links a:hover {
             color: #fff;
         }
 
-        /* ==============================
+        /* =========================
            MOBILE
-        ============================== */
+        ========================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 950px) {
 
             .nav {
                 padding: 0 22px;
@@ -545,7 +417,7 @@
             }
 
             .container {
-                width: min(100% - 44px, 1380px);
+                width: calc(100% - 44px);
             }
 
             section {
@@ -575,20 +447,16 @@
                 grid-template-columns: 1fr;
             }
 
-            .work-header {
+            .future-intro {
                 display: block;
             }
 
-            .work-note {
+            .future-note {
                 margin-top: 25px;
             }
 
-            .sector-row {
-                grid-template-columns: 55px 1fr;
-            }
-
-            .sector-note {
-                display: none;
+            .future-list {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .work-item {
@@ -601,13 +469,12 @@
 
             .footer-inner {
                 width: calc(100% - 44px);
-
                 flex-direction: column;
                 align-items: flex-start;
             }
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 550px) {
 
             .brand {
                 font-size: 14px;
@@ -616,11 +483,6 @@
             .brand img {
                 width: 30px;
                 height: 30px;
-            }
-
-            .social a {
-                width: 31px;
-                height: 31px;
             }
 
             .hero h1 {
@@ -636,8 +498,21 @@
                 letter-spacing: -3px;
             }
 
-            .button {
-                width: 100%;
+            .future-list {
+                grid-template-columns: 1fr;
+            }
+
+            .future-item {
+                min-height: 65px;
+            }
+
+            .footer-inner {
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
             }
         }
     </style>
@@ -645,70 +520,38 @@
 
 <body>
 
-<!-- =========================================
-     NAVIGATION
-========================================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
-
     <nav class="nav">
 
         <a href="#home" class="brand">
-            <img src="logo.png" alt="TECVEDEA">
+            <img src="logo.png" alt="TECVEDEA Logo">
             <span>TECVEDEA</span>
         </a>
 
-        <div class="nav-right">
-
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#focus">Focus</a>
-                <a href="#sectors">Sectors</a>
-                <a href="#work">Work</a>
-            </div>
-
-            <div class="social">
-
-                <!-- GitHub -->
-                <a
-                    href="https://github.com/TECVEDEA-Group"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="TECVEDEA on GitHub"
-                >
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.16c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-                    </svg>
-                </a>
-
-                <!-- X -->
-                <a
-                    href="https://x.com/tecvedea"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="TECVEDEA on X"
-                >
-                    <svg viewBox="0 0 24 24">
-                        <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L8.24 4H6.39L17.8 19.9Z"/>
-                    </svg>
-                </a>
-
-            </div>
-
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#focus">Focus</a>
+            <a href="#future">Future</a>
+            <a href="#work">Work</a>
         </div>
 
     </nav>
-
 </header>
 
 
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- =========================
+     MAIN
+========================= -->
 
-<main id="home">
+<main>
 
-    <section class="hero">
+    <!-- HERO -->
+
+    <section class="hero" id="home">
 
         <div class="container">
 
@@ -716,7 +559,7 @@
 
                 <img
                     src="logo.png"
-                    alt="TECVEDEA logo"
+                    alt="TECVEDEA Logo"
                     class="hero-logo"
                 >
 
@@ -727,29 +570,10 @@
                 </h1>
 
                 <p class="hero-description">
-                    A global innovation group advancing technology,
-                    science, engineering, and industry across multiple sectors.
+                    A global innovation group creating and advancing
+                    ideas, technologies, and ventures across industries
+                    and disciplines.
                 </p>
-
-                <div class="hero-actions">
-
-                    <a
-                        href="#about"
-                        class="button button-primary"
-                    >
-                        Discover TECVEDEA
-                    </a>
-
-                    <a
-                        href="https://github.com/TECVEDEA-Group"
-                        target="_blank"
-                        rel="noopener"
-                        class="button button-secondary"
-                    >
-                        GitHub
-                    </a>
-
-                </div>
 
             </div>
 
@@ -758,9 +582,7 @@
     </section>
 
 
-    <!-- =========================================
-         ABOUT
-    ========================================== -->
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -769,12 +591,10 @@
             <div class="about-grid">
 
                 <div>
-                    <div class="eyebrow">
-                        About
-                    </div>
+                    <div class="eyebrow">About TECVEDEA</div>
 
                     <h2 class="section-title">
-                        An organization built for long-term innovation.
+                        Built for long-term innovation.
                     </h2>
                 </div>
 
@@ -782,19 +602,19 @@
 
                     <p>
                         TECVEDEA is an innovation group focused on
-                        technology, science, engineering, and industry.
+                        building technology, developing ideas, and
+                        creating ventures with a long-term perspective.
                     </p>
 
                     <p>
-                        The organization is being developed to explore
-                        ambitious ideas, create technology, and build
-                        ventures across multiple sectors.
+                        Today, our work is focused on artificial
+                        intelligence, software, and digital technology.
                     </p>
 
                     <p>
-                        Our approach is long-term: identify important
-                        problems, develop strong technology, and create
-                        organizations capable of lasting impact.
+                        As the organization develops, new capabilities,
+                        projects, and ventures may extend into additional
+                        industries and disciplines.
                     </p>
 
                 </div>
@@ -806,26 +626,21 @@
     </section>
 
 
-    <!-- =========================================
-         FOCUS
-    ========================================== -->
+    <!-- CURRENT FOCUS -->
 
     <section id="focus">
 
         <div class="container">
 
-            <div class="eyebrow">
-                Areas of Focus
-            </div>
+            <div class="eyebrow">Current Focus</div>
 
             <h2 class="section-title">
-                Technology at the intersection of disciplines.
+                Where we are building today.
             </h2>
 
             <p class="section-description">
-                TECVEDEA explores areas where technological progress,
-                scientific thinking, and engineering can create new
-                possibilities.
+                TECVEDEA currently focuses on AI, software, and
+                digital technology.
             </p>
 
 
@@ -838,8 +653,9 @@
                     <h3>Artificial Intelligence</h3>
 
                     <p>
-                        AI systems, machine learning, intelligent
-                        software, and computational technologies.
+                        Developing AI systems, intelligent software,
+                        machine learning technologies, and related
+                        computational solutions.
                     </p>
 
                 </div>
@@ -849,11 +665,11 @@
 
                     <div class="focus-number">02</div>
 
-                    <h3>Software & Digital Systems</h3>
+                    <h3>Software</h3>
 
                     <p>
-                        Software products, platforms, infrastructure,
-                        and digital systems.
+                        Building software, applications, platforms,
+                        tools, and digital products.
                     </p>
 
                 </div>
@@ -863,25 +679,11 @@
 
                     <div class="focus-number">03</div>
 
-                    <h3>Science & Research</h3>
+                    <h3>Digital Technology</h3>
 
                     <p>
-                        Research-driven exploration of emerging
-                        technologies and scientific possibilities.
-                    </p>
-
-                </div>
-
-
-                <div class="focus-item">
-
-                    <div class="focus-number">04</div>
-
-                    <h3>Engineering</h3>
-
-                    <p>
-                        Engineering approaches for building reliable
-                        systems, technologies, and infrastructure.
+                        Exploring digital systems, infrastructure,
+                        automation, and emerging technology.
                     </p>
 
                 </div>
@@ -893,107 +695,88 @@
     </section>
 
 
-    <!-- =========================================
-         SECTORS
-    ========================================== -->
+    <!-- FUTURE AREAS -->
 
-    <section id="sectors">
+    <section id="future">
 
         <div class="container">
 
-            <div class="eyebrow">
-                Sectors
-            </div>
-
-            <h2 class="section-title">
-                Across industries.
-            </h2>
-
-            <p class="section-description">
-                TECVEDEA is designed as a multi-sector organization.
-                Its future work may extend wherever technology and
-                innovation can create meaningful value.
-            </p>
-
-
-            <div class="sector-list">
-
-                <div class="sector-row">
-                    <span class="sector-number">01</span>
-                    <span class="sector-name">Technology</span>
-                    <span class="sector-note">Focus</span>
-                </div>
-
-                <div class="sector-row">
-                    <span class="sector-number">02</span>
-                    <span class="sector-name">Artificial Intelligence</span>
-                    <span class="sector-note">Focus</span>
-                </div>
-
-                <div class="sector-row">
-                    <span class="sector-number">03</span>
-                    <span class="sector-name">Software</span>
-                    <span class="sector-note">Focus</span>
-                </div>
-
-                <div class="sector-row">
-                    <span class="sector-number">04</span>
-                    <span class="sector-name">Science</span>
-                    <span class="sector-note">Exploration</span>
-                </div>
-
-                <div class="sector-row">
-                    <span class="sector-number">05</span>
-                    <span class="sector-name">Engineering</span>
-                    <span class="sector-note">Exploration</span>
-                </div>
-
-                <div class="sector-row">
-                    <span class="sector-number">06</span>
-                    <span class="sector-name">Future Industries</span>
-                    <span class="sector-note">Long-term</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         WORK
-    ========================================== -->
-
-    <section id="work">
-
-        <div class="container">
-
-            <div class="work-header">
+            <div class="future-intro">
 
                 <div>
 
                     <div class="eyebrow">
-                        Work & Initiatives
+                        Future Areas of Exploration
                     </div>
 
                     <h2 class="section-title">
-                        Building from the ground up.
+                        Beyond today's focus.
                     </h2>
 
                 </div>
 
-                <p class="work-note">
-                    This section will evolve as TECVEDEA develops
-                    and launches real projects and ventures.
+                <p class="future-note">
+                    These areas represent potential directions for
+                    future exploration and ventures. They are not
+                    presented as current operations.
                 </p>
 
             </div>
 
 
-            <div class="work-list">
+            <div class="future-list">
 
-                <!-- REAL CURRENT INITIATIVE -->
+                <div class="future-item">Healthcare</div>
+                <div class="future-item">Agriculture & Farming</div>
+                <div class="future-item">Space</div>
+                <div class="future-item">Robotics</div>
+                <div class="future-item">Aerospace</div>
+                <div class="future-item">Drones</div>
+                <div class="future-item">Construction</div>
+                <div class="future-item">Manufacturing</div>
+                <div class="future-item">Transportation</div>
+                <div class="future-item">Semiconductors & Chips</div>
+                <div class="future-item">Energy</div>
+                <div class="future-item">Automotive</div>
+                <div class="future-item">Banking & Finance</div>
+                <div class="future-item">Education</div>
+                <div class="future-item">Media</div>
+                <div class="future-item">Food & Beverage</div>
+                <div class="future-item">Clothing & Apparel</div>
+                <div class="future-item">Real Estate</div>
+                <div class="future-item">Infrastructure</div>
+                <div class="future-item">Industrial Technology</div>
+                <div class="future-item">Biotechnology</div>
+                <div class="future-item">Consumer Products</div>
+                <div class="future-item">Telecommunications</div>
+                <div class="future-item">Defense & Security</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORK -->
+
+    <section id="work">
+
+        <div class="container">
+
+            <div class="eyebrow">Work & Initiatives</div>
+
+            <h2 class="section-title">
+                Building from the ground up.
+            </h2>
+
+            <p class="section-description">
+                Current projects and initiatives will be presented
+                here as they are developed and officially established.
+            </p>
+
+
+            <div class="work-list">
 
                 <div class="work-item">
 
@@ -1016,8 +799,6 @@
                 </div>
 
 
-                <!-- NO FAKE COMPANY -->
-
                 <div class="work-item">
 
                     <div>
@@ -1026,8 +807,7 @@
 
                         <p>
                             New ventures and projects will be added
-                            here as they are developed and officially
-                            launched.
+                            as they are developed and officially launched.
                         </p>
 
                     </div>
@@ -1045,17 +825,13 @@
     </section>
 
 
-    <!-- =========================================
-         VISION
-    ========================================== -->
+    <!-- VISION -->
 
     <section class="vision">
 
         <div class="container">
 
-            <div class="eyebrow">
-                Long-Term Vision
-            </div>
+            <div class="eyebrow">Long-Term Vision</div>
 
             <h2 class="vision-title">
                 Build technology that
@@ -1066,60 +842,12 @@
 
     </section>
 
-
-    <!-- =========================================
-         CONTACT
-    ========================================== -->
-
-    <section class="contact">
-
-        <div class="container">
-
-            <div class="eyebrow">
-                Connect
-            </div>
-
-            <h2 class="section-title">
-                Follow TECVEDEA.
-            </h2>
-
-            <p class="section-description">
-                Follow our development and explore the work we
-                release as the organization grows.
-            </p>
-
-            <div class="contact-actions">
-
-                <a
-                    href="https://github.com/TECVEDEA-Group"
-                    target="_blank"
-                    rel="noopener"
-                    class="button button-primary"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://x.com/tecvedea"
-                    target="_blank"
-                    rel="noopener"
-                    class="button button-secondary"
-                >
-                    X
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
 </main>
 
 
-<!-- =========================================
+<!-- =========================
      FOOTER
-========================================= -->
+========================= -->
 
 <footer>
 
@@ -1134,17 +862,23 @@
         </div>
 
         <div class="footer-links">
-            <a href="https://github.com/TECVEDEA-Group"
-               target="_blank"
-               rel="noopener">
+
+            <a
+                href="https://github.com/TECVEDEA-Group"
+                target="_blank"
+                rel="noopener"
+            >
                 GitHub
             </a>
 
-            <a href="https://x.com/tecvedea"
-               target="_blank"
-               rel="noopener">
+            <a
+                href="https://x.com/tecvedea"
+                target="_blank"
+                rel="noopener"
+            >
                 X
             </a>
+
         </div>
 
     </div>

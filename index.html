@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECVEDEA — Building the Future Across Every Industry.</title>
+
+    <meta name="description"
+          content="TECVEDEA is a global innovation group advancing technology, science, engineering, and industry across multiple sectors.">
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 28px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #222;
+            border-radius: 50%;
+
+            color: #aaa;
+            transition: 0.25s ease;
+        }
+
+        .social a:hover {
+            color: #fff;
+            border-color: #555;
+            transform: translateY(-2px);
+        }
+
+        .social svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 130px 25px 80px;
+
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background: radial-gradient(
+                circle,
+                rgba(255,255,255,0.07),
+                transparent 65%
+            );
+
+            filter: blur(20px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-logo {
+            width: 145px;
+            height: 145px;
+            object-fit: contain;
+
+            margin-bottom: 32px;
+
+            filter: drop-shadow(0 0 35px rgba(255,255,255,0.12));
+
+            animation: logoFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+            font-weight: 700;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #888;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+
+            color: #aaa;
+
+            font-size: clamp(17px, 2vw, 21px);
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            margin-top: 38px;
+
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 24px;
+
+            border: 1px solid #333;
+            border-radius: 6px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.25s ease;
+        }
+
+        .button.primary {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .button.primary:hover {
+            background: #ddd;
+        }
+
+        .button.secondary {
+            color: #fff;
+        }
+
+        .button.secondary:hover {
+            background: #151515;
+            border-color: #555;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 110px 28px;
+        }
+
+        .section-label {
+            color: #777;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 54px);
+            line-height: 1.1;
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+        .section-text {
+            max-width: 760px;
+
+            color: #999;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            border-top: 1px solid #111;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+
+            align-items: start;
+        }
+
+        /* =========================
+           AREAS
+        ========================= */
+
+        .areas {
+            border-top: 1px solid #111;
+        }
+
+        .cards {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            min-height: 210px;
+
+            padding: 30px;
+
+            border: 1px solid #1b1b1b;
+            border-radius: 10px;
+
+            background: #050505;
+
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #292929;
+            border-radius: 8px;
+
+            margin-bottom: 28px;
+
+            color: #fff;
+        }
+
+        .card-icon svg {
+            width: 21px;
+            height: 21px;
+
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           SECTORS
+        ========================= */
+
+        .sectors {
+            border-top: 1px solid #111;
+        }
+
+        .sector-list {
+            margin-top: 45px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .sector {
+            padding: 22px 0;
+
+            border-bottom: 1px solid #171717;
+
+            color: #bbb;
+            font-size: 18px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sector span {
+            color: #555;
+        }
+
+        /* =========================
+           ECOSYSTEM
+        ========================= */
+
+        .ecosystem {
+            border-top: 1px solid #111;
+        }
+
+        .ecosystem-box {
+            margin-top: 45px;
+
+            padding: 45px;
+
+            border: 1px solid #1d1d1d;
+            border-radius: 12px;
+
+            background: linear-gradient(
+                145deg,
+                #080808,
+                #030303
+            );
+        }
+
+        .ecosystem-main {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ecosystem-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .ecosystem-main h3 {
+            font-size: 28px;
+        }
+
+        .ecosystem-main p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .line {
+            height: 1px;
+            background: #1d1d1d;
+            margin: 35px 0;
+        }
+
+        .venture {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 0;
+        }
+
+        .venture-name {
+            font-weight: 600;
+        }
+
+        .venture-status {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* =========================
+           VISION
+        ========================= */
+
+        .vision {
+            border-top: 1px solid #111;
+            text-align: center;
+        }
+
+        .vision .section-text {
+            margin: auto;
+            max-width: 850px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            border-top: 1px solid #111;
+            text-align: center;
+        }
+
+        .contact .section-text {
+            margin: auto;
+        }
+
+        .contact-buttons {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #111;
+
+            padding: 35px 28px;
+
+            color: #555;
+            font-size: 13px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: #888;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav {
+                padding: 0 18px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-logo {
+                width: 115px;
+                height: 115px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            section {
+                padding: 80px 22px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .sector-list {
+                grid-template-columns: 1fr;
+            }
+
+            .ecosystem-box {
+                padding: 28px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .brand {
+                font-size: 16px;
+            }
+
+            .brand img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .social {
+                gap: 8px;
+            }
+
+            .social a {
+                width: 32px;
+                height: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .button {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+    <nav class="nav">
+
+        <a href="#home" class="brand">
+            <img src="logo.png" alt="TECVEDEA Logo">
+            <span>TECVEDEA</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#areas">Innovation</a>
+            <a href="#sectors">Sectors</a>
+            <a href="#ecosystem">Ecosystem</a>
+        </div>
+
+        <div class="social">
+
+            <!-- GitHub -->
+            <a href="https://github.com/TECVEDEA"
+               target="_blank"
+               rel="noopener"
+               aria-label="TECVEDEA GitHub">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.16c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                </svg>
+
+            </a>
+
+            <!-- X -->
+            <a href="#"
+               aria-label="TECVEDEA X">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L8.24 4H6.39L17.8 19.9Z"/>
+                </svg>
+
+            </a>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main id="home">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <img
+                src="logo.png"
+                alt="TECVEDEA"
+                class="hero-logo"
+            >
+
+            <h1>
+                Building the Future<br>
+                <span>Across Every Industry.</span>
+            </h1>
+
+            <p>
+                A global innovation group advancing technology,
+                science, engineering, and industry across multiple sectors.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="button primary">
+                    Explore TECVEDEA
+                </a>
+
+                <a href="#ecosystem" class="button secondary">
+                    Our Ecosystem
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-grid">
+
+            <div>
+                <div class="section-label">
+                    About TECVEDEA
+                </div>
+
+                <h2 class="section-title">
+                    Innovation without boundaries.
+                </h2>
+            </div>
+
+            <div>
+                <p class="section-text">
+                    TECVEDEA is a global innovation group focused on
+                    advancing technology, science, engineering, and
+                    industry through ambitious ideas and practical
+                    innovation.
+                </p>
+
+                <br>
+
+                <p class="section-text">
+                    We explore emerging technologies, develop new
+                    systems, and build ventures designed to contribute
+                    to the industries of tomorrow.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INNOVATION AREAS
+    ========================= -->
+
+    <section class="areas" id="areas">
+
+        <div class="section-label">
+            What We Explore
+        </div>
+
+        <h2 class="section-title">
+            Technology. Science. Engineering.
+        </h2>
+
+        <p class="section-text">
+            Our work spans multiple disciplines where technology
+            and innovation can create meaningful impact.
+        </p>
+
+
+        <div class="cards">
+
+            <!-- AI -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="16" height="16" rx="3"/>
+                        <path d="M9 9h6v6H9z"/>
+                        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+                    </svg>
+
+                </div>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Exploring intelligent systems, machine learning,
+                    prediction, automation, and AI-driven technologies.
+                </p>
+
+            </div>
+
+
+            <!-- Software -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="m8 9-4 3 4 3"/>
+                        <path d="m16 9 4 3-4 3"/>
+                        <path d="m14 5-4 14"/>
+                    </svg>
+
+                </div>
+
+                <h3>Software Engineering</h3>
+
+                <p>
+                    Building software, digital systems, platforms,
+                    and tools designed for real-world applications.
+                </p>
+
+            </div>
+
+
+            <!-- Science -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4"
+                                 transform="rotate(60 12 12)"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4"
+                                 transform="rotate(120 12 12)"/>
+                    </svg>
+
+                </div>
+
+                <h3>Science & Research</h3>
+
+                <p>
+                    Investigating ideas, technologies, and scientific
+                    concepts that can shape future possibilities.
+                </p>
+
+            </div>
+
+
+            <!-- Engineering -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v20M2 12h20"/>
+                        <circle cx="12" cy="12" r="7"/>
+                    </svg>
+
+                </div>
+
+                <h3>Engineering</h3>
+
+                <p>
+                    Applying engineering principles to develop systems,
+                    infrastructure, and innovative solutions.
+                </p>
+
+            </div>
+
+
+            <!-- Digital -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="14" rx="2"/>
+                        <path d="M8 21h8M12 18v3"/>
+                    </svg>
+
+                </div>
+
+                <h3>Digital Systems</h3>
+
+                <p>
+                    Creating connected digital experiences, platforms,
+                    infrastructure, and next-generation systems.
+                </p>
+
+            </div>
+
+
+            <!-- Future -->
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v4"/>
+                        <path d="M12 18v4"/>
+                        <path d="m4.93 4.93 2.83 2.83"/>
+                        <path d="m16.24 16.24 2.83 2.83"/>
+                        <path d="M2 12h4"/>
+                        <path d="M18 12h4"/>
+                        <circle cx="12" cy="12" r="5"/>
+                    </svg>
+
+                </div>
+
+                <h3>Future Technologies</h3>
+
+                <p>
+                    Exploring emerging technologies and new
+                    possibilities beyond today's boundaries.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECTORS
+    ========================= -->
+
+    <section class="sectors" id="sectors">
+
+        <div class="section-label">
+            Multiple Sectors
+        </div>
+
+        <h2 class="section-title">
+            Built beyond a single industry.
+        </h2>
+
+        <p class="section-text">
+            TECVEDEA aims to explore opportunities across diverse
+            fields where innovation can shape the future.
+        </p>
+
+
+        <div class="sector-list">
+
+            <div class="sector">
+                <span>Technology</span>
+                <span>01</span>
+            </div>
+
+            <div class="sector">
+                <span>Artificial Intelligence</span>
+                <span>02</span>
+            </div>
+
+            <div class="sector">
+                <span>Software</span>
+                <span>03</span>
+            </div>
+
+            <div class="sector">
+                <span>Science</span>
+                <span>04</span>
+            </div>
+
+            <div class="sector">
+                <span>Engineering</span>
+                <span>05</span>
+            </div>
+
+            <div class="sector">
+                <span>Future Industries</span>
+                <span>06</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ECOSYSTEM
+    ========================= -->
+
+    <section class="ecosystem" id="ecosystem">
+
+        <div class="section-label">
+            Ecosystem
+        </div>
+
+        <h2 class="section-title">
+            Ideas become ventures.
+        </h2>
+
+        <p class="section-text">
+            TECVEDEA provides an ecosystem for developing ambitious
+            ideas, projects, technologies, and future ventures.
+        </p>
+
+
+        <div class="ecosystem-box">
+
+            <div class="ecosystem-main">
+
+                <img
+                    src="logo.png"
+                    alt="TECVEDEA Logo"
+                    class="ecosystem-logo"
+                >
+
+                <div>
+                    <h3>TECVEDEA</h3>
+
+                    <p>
+                        Global Innovation Group
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <!-- DEEPBYTO -->
+
+            <div class="venture">
+
+                <div>
+                    <div class="venture-name">
+                        DEEPBYTO
+                    </div>
+
+                    <div class="venture-status">
+                        AI & Software Innovations
+                    </div>
+                </div>
+
+                <div class="venture-status">
+                    Initiative
+                </div>
+
+            </div>
+
+
+            <!-- Future -->
+
+            <div class="venture">
+
+                <div>
+                    <div class="venture-name">
+                        Future Ventures
+                    </div>
+
+                    <div class="venture-status">
+                        New technologies and projects
+                    </div>
+                </div>
+
+                <div class="venture-status">
+                    Coming Soon
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VISION
+    ========================= -->
+
+    <section class="vision">
+
+        <div class="section-label">
+            Our Vision
+        </div>
+
+        <h2 class="section-title">
+            Build what comes next.
+        </h2>
+
+        <p class="section-text">
+            We envision a future where technology, science, and
+            engineering work together to create new possibilities
+            across every industry.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">
+            Connect
+        </div>
+
+        <h2 class="section-title">
+            Follow the journey.
+        </h2>
+
+        <p class="section-text">
+            Explore our work, follow our progress, and discover
+            what TECVEDEA is building for the future.
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a
+                href="https://github.com/TECVEDEA"
+                target="_blank"
+                rel="noopener"
+                class="button primary"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="#"
+                class="button secondary"
+            >
+                X / Twitter
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            TECVEDEA
+        </div>
+
+        <div>
+            © <span id="year"></span> TECVEDEA. All rights reserved.
+        </div>
+
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+    // Automatically updates the copyright year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>

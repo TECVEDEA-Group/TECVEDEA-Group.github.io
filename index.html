@@ -2,18 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TECVEDEA</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines.">
+    <title>
+        TECVEDEA
+    </title>
+
+    <meta
+        name="description"
+        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines."
+    >
 
     <meta name="theme-color" content="#000000">
 
-    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Separate browser / mobile icon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="favicon.png"
+    >
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -27,8 +50,16 @@
         body {
             background: #000;
             color: #f5f5f5;
-            font-family: Inter, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Helvetica, Arial, sans-serif;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -42,83 +73,113 @@
             display: block;
         }
 
+
         /* =========================
            HEADER
         ========================= */
 
         header {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
 
             background: rgba(0, 0, 0, 0.94);
+
             border-bottom: 1px solid #151515;
         }
 
         .nav {
-            max-width: 1380px;
+            width: min(1380px, calc(100% - 84px));
+
             height: 78px;
+
             margin: auto;
-            padding: 0 42px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
+
+        /* Main website logo */
+
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 13px;
 
             font-size: 16px;
+
             font-weight: 700;
+
             letter-spacing: 2.5px;
         }
 
         .brand img {
             width: 36px;
             height: 36px;
+
             object-fit: contain;
         }
 
+
+        /* Navigation */
+
         .nav-links {
             display: flex;
+
             gap: 32px;
         }
 
         .nav-links a {
             color: #858585;
+
             font-size: 13px;
-            transition: color .2s ease;
+
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
             color: #fff;
         }
 
+
         /* =========================
-           LAYOUT
+           GLOBAL
         ========================= */
 
         .container {
             width: min(1380px, calc(100% - 84px));
+
             margin: auto;
         }
 
         section {
             border-top: 1px solid #151515;
+
             padding: 140px 0;
         }
 
         .eyebrow {
             color: #777;
+
             font-size: 11px;
+
             font-weight: 600;
+
             letter-spacing: 3px;
+
             text-transform: uppercase;
+
             margin-bottom: 28px;
         }
 
@@ -126,8 +187,11 @@
             max-width: 950px;
 
             font-size: clamp(38px, 5.2vw, 72px);
+
             line-height: 1.02;
+
             letter-spacing: -3px;
+
             font-weight: 600;
 
             margin-bottom: 30px;
@@ -137,9 +201,12 @@
             max-width: 760px;
 
             color: #888;
+
             font-size: 17px;
+
             line-height: 1.85;
         }
+
 
         /* =========================
            HERO
@@ -149,9 +216,11 @@
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
 
             padding-top: 150px;
+
             padding-bottom: 100px;
         }
 
@@ -159,22 +228,28 @@
             max-width: 1120px;
         }
 
+
+        /* Main website logo
+           STATIC — no animation */
+
         .hero-logo {
             width: 150px;
             height: 150px;
+
             object-fit: contain;
 
             margin-bottom: 52px;
-
-            /* STATIC LOGO — NO ANIMATION */
         }
 
         .hero h1 {
             max-width: 1100px;
 
             font-size: clamp(52px, 8vw, 112px);
-            line-height: .98;
+
+            line-height: 0.98;
+
             letter-spacing: -6px;
+
             font-weight: 600;
 
             margin-bottom: 42px;
@@ -188,9 +263,12 @@
             max-width: 850px;
 
             color: #999;
+
             font-size: clamp(17px, 2vw, 21px);
+
             line-height: 1.75;
         }
+
 
         /* =========================
            ABOUT
@@ -198,7 +276,9 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: .7fr 1.3fr;
+
+            grid-template-columns: 0.7fr 1.3fr;
+
             gap: 100px;
         }
 
@@ -208,10 +288,14 @@
 
         .about-copy p {
             color: #999;
+
             font-size: 18px;
+
             line-height: 1.9;
+
             margin-bottom: 24px;
         }
+
 
         /* =========================
            CURRENT FOCUS
@@ -221,38 +305,50 @@
             margin-top: 70px;
 
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
 
             border-top: 1px solid #1a1a1a;
+
             border-left: 1px solid #1a1a1a;
         }
 
         .focus-item {
             min-height: 240px;
+
             padding: 35px;
 
             border-right: 1px solid #1a1a1a;
+
             border-bottom: 1px solid #1a1a1a;
         }
 
         .focus-number {
             color: #555;
+
             font-size: 11px;
+
             letter-spacing: 2px;
+
             margin-bottom: 55px;
         }
 
         .focus-item h3 {
             font-size: 25px;
+
             font-weight: 500;
+
             margin-bottom: 12px;
         }
 
         .focus-item p {
             color: #777;
+
             font-size: 14px;
+
             line-height: 1.7;
         }
+
 
         /* =========================
            FUTURE AREAS
@@ -260,15 +356,21 @@
 
         .future-intro {
             display: flex;
+
             justify-content: space-between;
+
             align-items: flex-end;
+
             gap: 50px;
         }
 
         .future-note {
             max-width: 430px;
+
             color: #666;
+
             font-size: 13px;
+
             line-height: 1.7;
         }
 
@@ -276,9 +378,11 @@
             margin-top: 70px;
 
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
 
             border-top: 1px solid #1a1a1a;
+
             border-left: 1px solid #1a1a1a;
         }
 
@@ -286,16 +390,20 @@
             min-height: 78px;
 
             display: flex;
+
             align-items: center;
 
             padding: 0 25px;
 
             border-right: 1px solid #1a1a1a;
+
             border-bottom: 1px solid #1a1a1a;
 
             color: #aaa;
+
             font-size: 15px;
         }
+
 
         /* =========================
            WORK
@@ -303,6 +411,7 @@
 
         .work-list {
             margin-top: 65px;
+
             border-top: 1px solid #1a1a1a;
         }
 
@@ -310,7 +419,9 @@
             padding: 32px 0;
 
             display: grid;
+
             grid-template-columns: 1fr 200px;
+
             gap: 30px;
 
             border-bottom: 1px solid #1a1a1a;
@@ -318,22 +429,30 @@
 
         .work-item h3 {
             font-size: 25px;
+
             font-weight: 500;
+
             margin-bottom: 9px;
         }
 
         .work-item p {
             max-width: 750px;
+
             color: #777;
+
             font-size: 14px;
+
             line-height: 1.7;
         }
 
         .work-type {
             color: #666;
+
             font-size: 12px;
+
             text-align: right;
         }
+
 
         /* =========================
            VISION
@@ -341,6 +460,7 @@
 
         .vision {
             padding-top: 170px;
+
             padding-bottom: 170px;
         }
 
@@ -348,8 +468,11 @@
             max-width: 1150px;
 
             font-size: clamp(45px, 7vw, 100px);
+
             line-height: 1;
+
             letter-spacing: -5px;
+
             font-weight: 500;
         }
 
@@ -357,50 +480,63 @@
             color: #666;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
 
         footer {
             border-top: 1px solid #151515;
+
             padding: 35px 0;
         }
 
         .footer-inner {
             width: min(1380px, calc(100% - 84px));
+
             margin: auto;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 25px;
         }
 
         .footer-brand {
             font-size: 13px;
+
             font-weight: 600;
+
             letter-spacing: 2px;
         }
 
         .footer-copy {
             color: #555;
+
             font-size: 12px;
         }
 
         .footer-links {
             display: flex;
+
             gap: 22px;
         }
 
         .footer-links a {
             color: #666;
+
             font-size: 12px;
-            transition: color .2s ease;
+
+            transition: color 0.2s ease;
         }
 
         .footer-links a:hover {
             color: #fff;
         }
+
 
         /* =========================
            MOBILE
@@ -409,7 +545,7 @@
         @media (max-width: 950px) {
 
             .nav {
-                padding: 0 22px;
+                width: calc(100% - 44px);
             }
 
             .nav-links {
@@ -431,6 +567,7 @@
             .hero-logo {
                 width: 115px;
                 height: 115px;
+
                 margin-bottom: 40px;
             }
 
@@ -440,6 +577,7 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
             }
 
@@ -469,10 +607,15 @@
 
             .footer-inner {
                 width: calc(100% - 44px);
+
                 flex-direction: column;
-                align-items: flex-start;
+
+                align-items: center;
+
+                text-align: center;
             }
         }
+
 
         @media (max-width: 550px) {
 
@@ -487,6 +630,7 @@
 
             .hero h1 {
                 font-size: 50px;
+
                 letter-spacing: -2.5px;
             }
 
@@ -505,385 +649,574 @@
             .future-item {
                 min-height: 65px;
             }
-
-            .footer-inner {
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-links {
-                justify-content: center;
-            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
 
-<header>
-    <nav class="nav">
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-        <a href="#home" class="brand">
-            <img src="logo.png" alt="TECVEDEA Logo">
-            <span>TECVEDEA</span>
-        </a>
+    <header>
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#focus">Focus</a>
-            <a href="#future">Future</a>
-            <a href="#work">Work</a>
-        </div>
+        <nav class="nav">
 
-    </nav>
-</header>
-
-
-<!-- =========================
-     MAIN
-========================= -->
-
-<main>
-
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-        <div class="container">
-
-            <div class="hero-content">
+            <!-- Main website logo -->
+            <a
+                href="#home"
+                class="brand"
+            >
 
                 <img
                     src="logo.png"
                     alt="TECVEDEA Logo"
-                    class="hero-logo"
                 >
 
-                <h1>
-                    Building the Future
-                    <br>
-                    <span>Across Every Industry.</span>
-                </h1>
+                <span>
+                    TECVEDEA
+                </span>
 
-                <p class="hero-description">
-                    A global innovation group creating and advancing
-                    ideas, technologies, and ventures across industries
-                    and disciplines.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+            </a>
 
 
-    <!-- ABOUT -->
+            <div class="nav-links">
 
-    <section id="about">
+                <a href="#about">
+                    About
+                </a>
 
-        <div class="container">
+                <a href="#focus">
+                    Focus
+                </a>
 
-            <div class="about-grid">
+                <a href="#future">
+                    Future
+                </a>
 
-                <div>
-                    <div class="eyebrow">About TECVEDEA</div>
-
-                    <h2 class="section-title">
-                        Built for long-term innovation.
-                    </h2>
-                </div>
-
-                <div class="about-copy">
-
-                    <p>
-                        TECVEDEA is an innovation group focused on
-                        building technology, developing ideas, and
-                        creating ventures with a long-term perspective.
-                    </p>
-
-                    <p>
-                        Today, our work is focused on artificial
-                        intelligence, software, and digital technology.
-                    </p>
-
-                    <p>
-                        As the organization develops, new capabilities,
-                        projects, and ventures may extend into additional
-                        industries and disciplines.
-                    </p>
-
-                </div>
+                <a href="#work">
+                    Work
+                </a>
 
             </div>
 
-        </div>
+        </nav>
 
-    </section>
-
-
-    <!-- CURRENT FOCUS -->
-
-    <section id="focus">
-
-        <div class="container">
-
-            <div class="eyebrow">Current Focus</div>
-
-            <h2 class="section-title">
-                Where we are building today.
-            </h2>
-
-            <p class="section-description">
-                TECVEDEA currently focuses on AI, software, and
-                digital technology.
-            </p>
+    </header>
 
 
-            <div class="focus-grid">
 
-                <div class="focus-item">
+    <!-- =========================
+         MAIN
+    ========================= -->
 
-                    <div class="focus-number">01</div>
-
-                    <h3>Artificial Intelligence</h3>
-
-                    <p>
-                        Developing AI systems, intelligent software,
-                        machine learning technologies, and related
-                        computational solutions.
-                    </p>
-
-                </div>
+    <main>
 
 
-                <div class="focus-item">
+        <!-- HERO -->
 
-                    <div class="focus-number">02</div>
+        <section
+            class="hero"
+            id="home"
+        >
 
-                    <h3>Software</h3>
+            <div class="container">
 
-                    <p>
-                        Building software, applications, platforms,
-                        tools, and digital products.
-                    </p>
-
-                </div>
+                <div class="hero-content">
 
 
-                <div class="focus-item">
+                    <!-- Main website logo -->
+                    <img
+                        src="logo.png"
+                        alt="TECVEDEA Logo"
+                        class="hero-logo"
+                    >
 
-                    <div class="focus-number">03</div>
 
-                    <h3>Digital Technology</h3>
+                    <h1>
 
-                    <p>
-                        Exploring digital systems, infrastructure,
-                        automation, and emerging technology.
+                        Building the Future
+
+                        <br>
+
+                        <span>
+                            Across Every Industry.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        A global innovation group creating and
+                        advancing ideas, technologies, and ventures
+                        across industries and disciplines.
+
                     </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- FUTURE AREAS -->
 
-    <section id="future">
+        <!-- ABOUT -->
 
-        <div class="container">
+        <section id="about">
 
-            <div class="future-intro">
+            <div class="container">
 
-                <div>
+                <div class="about-grid">
 
-                    <div class="eyebrow">
-                        Future Areas of Exploration
-                    </div>
-
-                    <h2 class="section-title">
-                        Beyond today's focus.
-                    </h2>
-
-                </div>
-
-                <p class="future-note">
-                    These areas represent potential directions for
-                    future exploration and ventures. They are not
-                    presented as current operations.
-                </p>
-
-            </div>
-
-
-            <div class="future-list">
-
-                <div class="future-item">Healthcare</div>
-                <div class="future-item">Agriculture & Farming</div>
-                <div class="future-item">Space</div>
-                <div class="future-item">Robotics</div>
-                <div class="future-item">Aerospace</div>
-                <div class="future-item">Drones</div>
-                <div class="future-item">Construction</div>
-                <div class="future-item">Manufacturing</div>
-                <div class="future-item">Transportation</div>
-                <div class="future-item">Semiconductors & Chips</div>
-                <div class="future-item">Energy</div>
-                <div class="future-item">Automotive</div>
-                <div class="future-item">Banking & Finance</div>
-                <div class="future-item">Education</div>
-                <div class="future-item">Media</div>
-                <div class="future-item">Food & Beverage</div>
-                <div class="future-item">Clothing & Apparel</div>
-                <div class="future-item">Real Estate</div>
-                <div class="future-item">Infrastructure</div>
-                <div class="future-item">Industrial Technology</div>
-                <div class="future-item">Biotechnology</div>
-                <div class="future-item">Consumer Products</div>
-                <div class="future-item">Telecommunications</div>
-                <div class="future-item">Defense & Security</div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- WORK -->
-
-    <section id="work">
-
-        <div class="container">
-
-            <div class="eyebrow">Work & Initiatives</div>
-
-            <h2 class="section-title">
-                Building from the ground up.
-            </h2>
-
-            <p class="section-description">
-                Current projects and initiatives will be presented
-                here as they are developed and officially established.
-            </p>
-
-
-            <div class="work-list">
-
-                <div class="work-item">
 
                     <div>
 
-                        <h3>DEEPBYTO</h3>
+                        <div class="eyebrow">
+                            About TECVEDEA
+                        </div>
+
+                        <h2 class="section-title">
+                            Built for long-term innovation.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="about-copy">
 
                         <p>
-                            An AI and software innovation initiative
-                            focused on developing technology and
-                            digital solutions.
+                            TECVEDEA is an innovation group focused
+                            on building technology, developing ideas,
+                            and creating ventures with a long-term
+                            perspective.
+                        </p>
+
+                        <p>
+                            Today, our work is focused on artificial
+                            intelligence, software, and digital
+                            technology.
+                        </p>
+
+                        <p>
+                            As the organization develops, new
+                            capabilities, projects, and ventures may
+                            extend into additional industries and
+                            disciplines.
                         </p>
 
                     </div>
 
-                    <div class="work-type">
-                        Current Initiative
-                    </div>
+                </div>
 
+            </div>
+
+        </section>
+
+
+
+        <!-- CURRENT FOCUS -->
+
+        <section id="focus">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+                    Current Focus
                 </div>
 
 
-                <div class="work-item">
+                <h2 class="section-title">
+                    Where we are building today.
+                </h2>
 
-                    <div>
 
-                        <h3>Future Ventures</h3>
+                <p class="section-description">
+
+                    TECVEDEA currently focuses on AI, software,
+                    and digital technology.
+
+                </p>
+
+
+                <div class="focus-grid">
+
+
+                    <div class="focus-item">
+
+                        <div class="focus-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Artificial Intelligence
+                        </h3>
 
                         <p>
-                            New ventures and projects will be added
-                            as they are developed and officially launched.
+                            Developing AI systems, intelligent
+                            software, machine learning technologies,
+                            and related computational solutions.
                         </p>
 
                     </div>
 
-                    <div class="work-type">
-                        Future
+
+                    <div class="focus-item">
+
+                        <div class="focus-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Software
+                        </h3>
+
+                        <p>
+                            Building software, applications,
+                            platforms, tools, and digital products.
+                        </p>
+
+                    </div>
+
+
+                    <div class="focus-item">
+
+                        <div class="focus-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Digital Technology
+                        </h3>
+
+                        <p>
+                            Exploring digital systems,
+                            infrastructure, automation, and
+                            emerging technology.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FUTURE AREAS -->
+
+        <section id="future">
+
+            <div class="container">
+
+
+                <div class="future-intro">
+
+
+                    <div>
+
+                        <div class="eyebrow">
+                            Future Areas of Exploration
+                        </div>
+
+                        <h2 class="section-title">
+                            Beyond today's focus.
+                        </h2>
+
+                    </div>
+
+
+                    <p class="future-note">
+
+                        These areas represent potential directions
+                        for future exploration and ventures. They
+                        are not presented as current operations.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="future-list">
+
+                    <div class="future-item">
+                        Healthcare
+                    </div>
+
+                    <div class="future-item">
+                        Agriculture & Farming
+                    </div>
+
+                    <div class="future-item">
+                        Space
+                    </div>
+
+                    <div class="future-item">
+                        Robotics
+                    </div>
+
+                    <div class="future-item">
+                        Aerospace
+                    </div>
+
+                    <div class="future-item">
+                        Drones
+                    </div>
+
+                    <div class="future-item">
+                        Construction
+                    </div>
+
+                    <div class="future-item">
+                        Manufacturing
+                    </div>
+
+                    <div class="future-item">
+                        Transportation
+                    </div>
+
+                    <div class="future-item">
+                        Semiconductors & Chips
+                    </div>
+
+                    <div class="future-item">
+                        Energy
+                    </div>
+
+                    <div class="future-item">
+                        Automotive
+                    </div>
+
+                    <div class="future-item">
+                        Banking & Finance
+                    </div>
+
+                    <div class="future-item">
+                        Education
+                    </div>
+
+                    <div class="future-item">
+                        Media
+                    </div>
+
+                    <div class="future-item">
+                        Food & Beverage
+                    </div>
+
+                    <div class="future-item">
+                        Clothing & Apparel
+                    </div>
+
+                    <div class="future-item">
+                        Real Estate
+                    </div>
+
+                    <div class="future-item">
+                        Infrastructure
+                    </div>
+
+                    <div class="future-item">
+                        Industrial Technology
+                    </div>
+
+                    <div class="future-item">
+                        Biotechnology
+                    </div>
+
+                    <div class="future-item">
+                        Consumer Products
+                    </div>
+
+                    <div class="future-item">
+                        Telecommunications
+                    </div>
+
+                    <div class="future-item">
+                        Defense & Security
                     </div>
 
                 </div>
 
             </div>
 
+        </section>
+
+
+
+        <!-- WORK -->
+
+        <section id="work">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+                    Work & Initiatives
+                </div>
+
+
+                <h2 class="section-title">
+                    Building from the ground up.
+                </h2>
+
+
+                <p class="section-description">
+
+                    Current projects and initiatives will be
+                    presented here as they are developed and
+                    officially established.
+
+                </p>
+
+
+                <div class="work-list">
+
+
+                    <div class="work-item">
+
+                        <div>
+
+                            <h3>
+                                DEEPBYTO
+                            </h3>
+
+                            <p>
+                                An AI and software innovation
+                                initiative focused on developing
+                                technology and digital solutions.
+                            </p>
+
+                        </div>
+
+
+                        <div class="work-type">
+                            Current Initiative
+                        </div>
+
+                    </div>
+
+
+                    <div class="work-item">
+
+                        <div>
+
+                            <h3>
+                                Future Ventures
+                            </h3>
+
+                            <p>
+                                New ventures and projects will be
+                                added as they are developed and
+                                officially launched.
+                            </p>
+
+                        </div>
+
+
+                        <div class="work-type">
+                            Future
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- VISION -->
+
+        <section class="vision">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    Long-Term Vision
+                </div>
+
+
+                <h2 class="vision-title">
+
+                    Build technology that
+
+                    <span>
+                        outlasts the moment.
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+
+            <div class="footer-brand">
+                TECVEDEA
+            </div>
+
+
+            <div class="footer-copy">
+                © 2026 TECVEDEA
+            </div>
+
+
+            <!-- GitHub and X ONLY in footer -->
+
+            <div class="footer-links">
+
+
+                <a
+                    href="https://github.com/TECVEDEA-Group"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+
+
+                <a
+                    href="https://x.com/tecvedea"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    X
+                </a>
+
+
+            </div>
+
+
         </div>
 
-    </section>
+    </footer>
 
-
-    <!-- VISION -->
-
-    <section class="vision">
-
-        <div class="container">
-
-            <div class="eyebrow">Long-Term Vision</div>
-
-            <h2 class="vision-title">
-                Build technology that
-                <span>outlasts the moment.</span>
-            </h2>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            TECVEDEA
-        </div>
-
-        <div class="footer-copy">
-            © 2026 TECVEDEA
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                href="https://github.com/TECVEDEA-Group"
-                target="_blank"
-                rel="noopener"
-            >
-                GitHub
-            </a>
-
-            <a
-                href="https://x.com/tecvedea"
-                target="_blank"
-                rel="noopener"
-            >
-                X
-            </a>
-
-        </div>
-
-    </div>
-
-</footer>
 
 </body>
 </html>

@@ -1,34 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TECVEDEA</title>
+    <title>TECVEDEA — Building the Future Across Every Industry.</title>
 
-    <meta name="description"
-        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines." />
+    <meta
+        name="description"
+        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines."
+    >
 
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="TECVEDEA — Building the Future Across Every Industry." />
-    <meta property="og:description"
-        content="A global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tecvedea.com" />
-    <meta property="og:image" content="https://tecvedea.com/og-image.jpg" />
+    <meta property="og:title" content="TECVEDEA — Building the Future Across Every Industry.">
+    <meta
+        property="og:description"
+        content="A global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tecvedea.com">
+    <meta property="og:image" content="https://tecvedea.com/og-image.jpg">
 
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#000000">
 
-    <link rel="icon" type="image/png" href="logo.png" />
+    <!-- Separate website icon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- Fonts: Space Grotesk (headings) + DM Sans (body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
-        /* ---------- RESET ---------- */
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -42,15 +54,23 @@
         body {
             background: #000;
             color: #f5f5f5;
-            font-family: "DM Sans", -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Helvetica, Arial, sans-serif;
+
+            font-family:
+                "DM Sans",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
             line-height: 1.6;
             overflow-x: hidden;
+
             opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
+            animation: pageFade 0.8s ease forwards;
         }
 
-        @keyframes fadeIn {
+        @keyframes pageFade {
             to {
                 opacity: 1;
             }
@@ -65,21 +85,19 @@
             display: block;
         }
 
-        /* ---------- TYPOGRAPHY ---------- */
+
+        /* =====================================================
+           TYPOGRAPHY
+        ===================================================== */
+
         h1,
         h2,
         h3,
-        h4,
         .brand,
         .footer-brand,
         .nav-links a,
-        .mobile-nav a,
-        .work-item h3,
-        .vision-title {
-            font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont,
-                "Segoe UI", Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.03em;
+        .mobile-nav a {
+            font-family: "Space Grotesk", sans-serif;
         }
 
         .brand {
@@ -88,37 +106,28 @@
         }
 
         .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
             font-weight: 700;
             letter-spacing: -0.06em;
         }
 
         .section-title {
+            font-family: "Space Grotesk", sans-serif;
             font-weight: 600;
             letter-spacing: -0.04em;
         }
 
-        .vision-title {
-            font-weight: 500;
-            letter-spacing: -0.05em;
-        }
 
-        .focus-item h3 {
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
 
-        .eyebrow {
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        /* ---------- SCROLL ANIMATIONS ---------- */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.85s cubic-bezier(0.23, 1, 0.32, 1),
+
+            transition:
+                opacity 0.85s cubic-bezier(0.23, 1, 0.32, 1),
                 transform 0.85s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
@@ -127,58 +136,85 @@
             transform: translateY(0);
         }
 
-        /* ---------- HEADER ---------- */
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
         header {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.94);
+
+            background: rgba(0, 0, 0, 0.92);
+
             border-bottom: 1px solid #151515;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .nav {
             max-width: 1380px;
+
             height: 78px;
+
             margin: auto;
+
             padding: 0 42px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
+
+        /* Main logo */
+
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 13px;
+
             font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            font-family: "Space Grotesk", sans-serif;
+
             z-index: 1001;
         }
 
         .brand img {
             width: 36px;
             height: 36px;
+
             object-fit: contain;
         }
 
+
+        /* Desktop navigation */
+
         .nav-links {
             display: flex;
+
             gap: 32px;
-            z-index: 1001;
         }
 
         .nav-links a {
             color: #858585;
+
             font-size: 13px;
-            font-family: "Space Grotesk", sans-serif;
+
             font-weight: 500;
+
             letter-spacing: 0.5px;
+
             transition: color 0.2s ease;
         }
 
@@ -186,49 +222,81 @@
             color: #fff;
         }
 
-        /* Hamburger */
+
+        /* =====================================================
+           HAMBURGER
+        ===================================================== */
+
         .hamburger {
             display: none;
+
             flex-direction: column;
+
             gap: 5px;
+
             background: none;
+
             border: none;
+
             cursor: pointer;
+
             padding: 4px;
+
             z-index: 1001;
         }
 
         .hamburger span {
-            display: block;
             width: 24px;
             height: 2px;
+
             background: #ccc;
+
             border-radius: 2px;
+
             transition: 0.3s ease;
         }
 
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+            transform:
+                rotate(45deg)
+                translate(5px, 5px);
         }
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
+
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
+            transform:
+                rotate(-45deg)
+                translate(5px, -5px);
         }
 
-        /* Mobile nav overlay */
+
+        /* =====================================================
+           MOBILE NAV
+        ===================================================== */
+
         .mobile-nav {
             display: none;
+
             position: fixed;
+
             top: 78px;
             left: 0;
+
             width: 100%;
+
             background: rgba(0, 0, 0, 0.98);
+
             padding: 30px 42px 50px;
+
             flex-direction: column;
+
             gap: 18px;
+
             border-bottom: 1px solid #1a1a1a;
+
             z-index: 999;
         }
 
@@ -238,48 +306,68 @@
 
         .mobile-nav a {
             color: #aaa;
+
             font-size: 18px;
-            font-family: "Space Grotesk", sans-serif;
+
             font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.2s;
         }
 
         .mobile-nav a:hover {
             color: #fff;
         }
 
-        /* ---------- HERO WITH SLIDESHOW ---------- */
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
         .hero {
             min-height: 100vh;
+
             display: flex;
+
             align-items: center;
+
             padding-top: 150px;
+
             padding-bottom: 100px;
+
             position: relative;
+
             overflow: hidden;
         }
 
-        /* Slideshow background */
+
+        /* Background slideshow */
+
         .hero-slideshow {
             position: absolute;
-            top: 0;
-            left: 0;
+
+            inset: 0;
+
             width: 100%;
             height: 100%;
+
             z-index: 0;
         }
 
         .hero-slideshow .slide {
             position: absolute;
-            top: 0;
-            left: 0;
+
+            inset: 0;
+
             width: 100%;
             height: 100%;
+
             background-size: cover;
+
             background-position: center;
+
             opacity: 0;
-            transition: opacity 1.2s ease-in-out;
+
+            transition:
+                opacity 1.4s ease-in-out;
+
             will-change: opacity;
         }
 
@@ -287,400 +375,643 @@
             opacity: 1;
         }
 
-        /* Dark overlay on slideshow */
+
+        /* Dark cinematic overlay */
+
         .hero-slideshow::after {
-            content: '';
+            content: "";
+
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.88) 0%,
+                    rgba(0,0,0,0.67) 45%,
+                    rgba(0,0,0,0.48) 100%
+                );
+
             z-index: 1;
         }
 
+
+        /* Bottom fade */
+
+        .hero-slideshow::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 180px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    #000
+                );
+
+            z-index: 2;
+        }
+
+
         .hero-content {
             position: relative;
-            z-index: 2;
+
+            z-index: 3;
+
             max-width: 1120px;
+
             width: 100%;
         }
+
+
+        /* STATIC LOGO */
 
         .hero-logo {
             width: 150px;
             height: 150px;
+
             object-fit: contain;
-            margin-bottom: 40px;
+
+            margin-bottom: 42px;
+
+            /*
+             * IMPORTANT:
+             * No animation.
+             * No rotation.
+             * Logo remains completely static.
+             */
         }
 
-        /* Slide Text Content */
+
+        /* Hero text */
+
         .hero-text-content {
-            min-height: 280px;
+            min-height: 300px;
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
         }
 
         .hero-slide-label {
-            color: #ffcc00;
-            font-size: 14px;
+            color: #bbb;
+
             font-family: "Space Grotesk", sans-serif;
+
+            font-size: 13px;
+
             font-weight: 600;
+
             letter-spacing: 4px;
+
             text-transform: uppercase;
-            margin-bottom: 16px;
+
+            margin-bottom: 18px;
+
             opacity: 0;
+
             transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+
+            transition:
+                opacity 0.6s ease,
+                transform 0.6s ease;
         }
 
         .hero-slide-label.active {
             opacity: 1;
+
             transform: translateY(0);
         }
 
+
         .hero h1 {
             max-width: 1100px;
-            font-size: clamp(42px, 7vw, 90px);
+
+            font-size: clamp(
+                48px,
+                7vw,
+                94px
+            );
+
             line-height: 0.98;
-            letter-spacing: -0.06em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            font-family: "Space Grotesk", sans-serif;
-            text-shadow: 0 4px 60px rgba(0, 0, 0, 0.8);
+
+            margin-bottom: 25px;
+
+            text-shadow:
+                0 4px 60px
+                rgba(0,0,0,0.8);
         }
 
         .hero h1 .slide-title {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
             display: block;
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
         }
 
         .hero h1 .slide-title.active {
             opacity: 1;
+
             transform: translateY(0);
         }
 
         .hero h1 .slide-title span {
-            color: #ffcc00;
+            color: #aaa;
         }
 
+
         .hero-slide-description {
-            max-width: 750px;
+            max-width: 760px;
+
             color: #ddd;
-            font-size: clamp(16px, 1.6vw, 20px);
+
+            font-size: clamp(
+                16px,
+                1.6vw,
+                20px
+            );
+
             line-height: 1.8;
-            font-family: "DM Sans", sans-serif;
-            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.9);
+
+            text-shadow:
+                0 2px 30px
+                rgba(0,0,0,0.9);
+
             opacity: 0;
+
             transform: translateY(20px);
-            transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+
+            transition:
+                opacity 0.7s ease 0.15s,
+                transform 0.7s ease 0.15s;
         }
 
         .hero-slide-description.active {
             opacity: 1;
+
             transform: translateY(0);
         }
 
-        /* Slide counter/industry indicator */
+
+        /* =====================================================
+           SLIDE COUNTER
+        ===================================================== */
+
         .slide-counter {
             position: absolute;
-            bottom: 40px;
+
             right: 60px;
-            z-index: 3;
-            color: rgba(255, 255, 255, 0.3);
+            bottom: 40px;
+
+            z-index: 4;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.35
+            );
+
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 14px;
+
             letter-spacing: 2px;
         }
 
         .slide-counter .current {
             color: #fff;
+
             font-size: 28px;
+
             font-weight: 700;
         }
 
-        /* Slide indicators */
+
+        /* =====================================================
+           SLIDE INDICATORS
+        ===================================================== */
+
         .slide-indicators {
             position: absolute;
-            bottom: 40px;
+
             left: 50%;
-            transform: translateX(-50%);
+            bottom: 40px;
+
+            transform:
+                translateX(-50%);
+
             display: flex;
-            gap: 10px;
-            z-index: 3;
+
+            gap: 9px;
+
+            z-index: 4;
         }
 
         .slide-indicators .dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
+
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background 0.4s ease, transform 0.4s ease, width 0.4s ease;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.25
+                );
+
             cursor: pointer;
+
+            transition:
+                all 0.4s ease;
         }
 
         .slide-indicators .dot.active {
-            background: #ffcc00;
-            transform: scale(1.2);
-            border-color: #ffcc00;
-            width: 30px;
-            border-radius: 6px;
+            width: 28px;
+
+            border-radius: 5px;
+
+            background: #fff;
         }
 
-        .slide-indicators .dot:hover {
-            background: rgba(255, 204, 0, 0.5);
-        }
 
-        /* ---------- LAYOUT ---------- */
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
         .container {
-            width: min(1380px, calc(100% - 84px));
+            width:
+                min(
+                    1380px,
+                    calc(100% - 84px)
+                );
+
             margin: auto;
         }
 
         section {
             border-top: 1px solid #151515;
+
             padding: 140px 0;
         }
 
         .eyebrow {
             color: #888;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 28px;
+
             font-family: "Space Grotesk", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 28px;
         }
 
         .section-title {
             max-width: 950px;
-            font-size: clamp(38px, 5.2vw, 72px);
+
+            font-size:
+                clamp(
+                    38px,
+                    5.2vw,
+                    72px
+                );
+
             line-height: 1.02;
-            letter-spacing: -0.04em;
-            font-weight: 600;
+
             margin-bottom: 30px;
-            font-family: "Space Grotesk", sans-serif;
         }
 
         .section-description {
             max-width: 760px;
-            color: #aaa;
+
+            color: #999;
+
             font-size: 17px;
+
             line-height: 1.85;
-            font-family: "DM Sans", sans-serif;
         }
 
-        /* ---------- ABOUT ---------- */
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
         .about-grid {
             display: grid;
-            grid-template-columns: 0.7fr 1.3fr;
+
+            grid-template-columns:
+                0.7fr 1.3fr;
+
             gap: 100px;
         }
 
         .about-copy p {
-            color: #bbb;
+            color: #aaa;
+
             font-size: 18px;
+
             line-height: 1.9;
+
             margin-bottom: 24px;
-            font-family: "DM Sans", sans-serif;
         }
 
-        /* ---------- CURRENT FOCUS ---------- */
+
+        /* =====================================================
+           CURRENT FOCUS
+        ===================================================== */
+
         .focus-grid {
             margin-top: 70px;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             border-top: 1px solid #1a1a1a;
+
             border-left: 1px solid #1a1a1a;
         }
 
         .focus-item {
             min-height: 240px;
+
             padding: 35px;
-            border-right: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
+
+            border-right:
+                1px solid #1a1a1a;
+
+            border-bottom:
+                1px solid #1a1a1a;
         }
 
         .focus-number {
             color: #555;
-            font-size: 11px;
+
             font-family: "Space Grotesk", sans-serif;
-            font-weight: 600;
+
+            font-size: 11px;
+
             letter-spacing: 2px;
+
             margin-bottom: 55px;
         }
 
         .focus-item h3 {
-            font-size: 25px;
-            font-weight: 600;
-            margin-bottom: 12px;
             font-family: "Space Grotesk", sans-serif;
-            letter-spacing: -0.02em;
+
+            font-size: 25px;
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
         }
 
         .focus-item p {
-            color: #999;
+            color: #888;
+
             font-size: 14px;
+
             line-height: 1.7;
-            font-family: "DM Sans", sans-serif;
         }
 
-        /* ---------- FUTURE AREAS ---------- */
+
+        /* =====================================================
+           FUTURE
+        ===================================================== */
+
         .future-intro {
             display: flex;
+
             justify-content: space-between;
+
             align-items: flex-end;
+
             gap: 50px;
         }
 
         .future-note {
             max-width: 430px;
-            color: #777;
+
+            color: #666;
+
             font-size: 13px;
+
             line-height: 1.7;
-            font-family: "DM Sans", sans-serif;
         }
 
         .future-list {
             margin-top: 70px;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             border-top: 1px solid #1a1a1a;
+
             border-left: 1px solid #1a1a1a;
         }
 
         .future-item {
             min-height: 78px;
+
             display: flex;
+
             align-items: center;
+
             padding: 0 25px;
-            border-right: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
-            color: #bbb;
+
+            border-right:
+                1px solid #1a1a1a;
+
+            border-bottom:
+                1px solid #1a1a1a;
+
+            color: #aaa;
+
             font-size: 15px;
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 400;
-            letter-spacing: 0.3px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
         }
 
-        /* ---------- WORK ---------- */
+
+        /* =====================================================
+           WORK
+        ===================================================== */
+
         .work-list {
             margin-top: 65px;
+
             border-top: 1px solid #1a1a1a;
         }
 
         .work-item {
             padding: 32px 0;
+
             display: grid;
-            grid-template-columns: 1fr 200px;
+
+            grid-template-columns:
+                1fr 200px;
+
             gap: 30px;
-            border-bottom: 1px solid #1a1a1a;
+
+            border-bottom:
+                1px solid #1a1a1a;
         }
 
         .work-item h3 {
             font-size: 25px;
-            font-weight: 600;
+
             margin-bottom: 9px;
-            font-family: "Space Grotesk", sans-serif;
-            letter-spacing: -0.02em;
         }
 
         .work-item p {
             max-width: 750px;
-            color: #999;
+
+            color: #888;
+
             font-size: 14px;
+
             line-height: 1.7;
-            font-family: "DM Sans", sans-serif;
         }
 
         .work-type {
-            color: #888;
+            color: #666;
+
             font-size: 12px;
+
             text-align: right;
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 500;
-            letter-spacing: 0.5px;
         }
 
-        .work-item.placeholder {
-            opacity: 0.5;
-        }
 
-        .work-item.placeholder .work-type {
-            color: #555;
-            font-style: italic;
-        }
+        /* =====================================================
+           VISION
+        ===================================================== */
 
-        /* ---------- VISION ---------- */
         .vision {
             padding-top: 170px;
+
             padding-bottom: 170px;
         }
 
         .vision-title {
             max-width: 1150px;
-            font-size: clamp(45px, 7vw, 100px);
-            line-height: 1;
-            letter-spacing: -0.05em;
-            font-weight: 500;
+
             font-family: "Space Grotesk", sans-serif;
+
+            font-size:
+                clamp(
+                    45px,
+                    7vw,
+                    100px
+                );
+
+            line-height: 1;
+
+            letter-spacing: -0.05em;
+
+            font-weight: 500;
         }
 
         .vision-title span {
             color: #666;
         }
 
-        /* ---------- FOOTER ---------- */
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
         footer {
             border-top: 1px solid #151515;
+
             padding: 35px 0;
         }
 
         .footer-inner {
-            width: min(1380px, calc(100% - 84px));
+            width:
+                min(
+                    1380px,
+                    calc(100% - 84px)
+                );
+
             margin: auto;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 25px;
         }
 
         .footer-brand {
             font-size: 13px;
+
             font-weight: 700;
+
             letter-spacing: 2px;
-            font-family: "Space Grotesk", sans-serif;
         }
 
         .footer-copy {
             color: #555;
+
             font-size: 12px;
-            font-family: "DM Sans", sans-serif;
         }
 
         .footer-links {
             display: flex;
+
             gap: 22px;
         }
 
         .footer-links a {
-            color: #777;
-            font-size: 12px;
+            color: #666;
+
             font-family: "Space Grotesk", sans-serif;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.2s ease;
+
+            font-size: 12px;
+
+            transition:
+                color 0.2s ease;
         }
 
         .footer-links a:hover {
             color: #fff;
         }
 
-        /* ---------- RESPONSIVE ---------- */
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
         @media (max-width: 950px) {
+
             .nav {
                 padding: 0 22px;
             }
@@ -694,7 +1025,8 @@
             }
 
             .container {
-                width: calc(100% - 44px);
+                width:
+                    calc(100% - 44px);
             }
 
             section {
@@ -703,39 +1035,20 @@
 
             .hero {
                 padding-top: 130px;
-                padding-bottom: 80px;
             }
 
             .hero-logo {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 30px;
-            }
-
-            .hero h1 {
-                font-size: clamp(36px, 6vw, 56px);
-                letter-spacing: -0.04em;
+                width: 110px;
+                height: 110px;
             }
 
             .hero-text-content {
-                min-height: 200px;
-            }
-
-            .slide-counter {
-                right: 30px;
-                bottom: 25px;
-            }
-
-            .slide-counter .current {
-                font-size: 20px;
-            }
-
-            .slide-indicators {
-                bottom: 25px;
+                min-height: 230px;
             }
 
             .about-grid {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
             }
 
@@ -745,6 +1058,7 @@
 
             .future-intro {
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
@@ -753,7 +1067,8 @@
             }
 
             .future-list {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .work-item {
@@ -764,19 +1079,19 @@
                 text-align: left;
             }
 
-            .vision {
-                padding-top: 100px;
-                padding-bottom: 100px;
-            }
-
             .footer-inner {
-                width: calc(100% - 44px);
-                flex-direction: column;
-                align-items: flex-start;
+                width:
+                    calc(100% - 44px);
             }
         }
 
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 550px) {
+
             .brand {
                 font-size: 14px;
             }
@@ -786,17 +1101,32 @@
                 height: 30px;
             }
 
+            .hero {
+                padding-top: 120px;
+
+                min-height: 100svh;
+            }
+
+            .hero-logo {
+                width: 90px;
+                height: 90px;
+
+                margin-bottom: 30px;
+            }
+
             .hero h1 {
-                font-size: 32px;
-                letter-spacing: -0.035em;
+                font-size: 42px;
+
+                letter-spacing: -0.04em;
             }
 
             .hero-text-content {
-                min-height: 160px;
+                min-height: 240px;
             }
 
             .hero-slide-label {
-                font-size: 11px;
+                font-size: 10px;
+
                 letter-spacing: 2px;
             }
 
@@ -804,12 +1134,12 @@
                 font-size: 14px;
             }
 
-            .section-title {
-                letter-spacing: -0.03em;
+            .slide-counter {
+                display: none;
             }
 
-            .vision-title {
-                letter-spacing: -0.04em;
+            .slide-indicators {
+                bottom: 20px;
             }
 
             .future-list {
@@ -821,580 +1151,1280 @@
             }
 
             .footer-inner {
-                align-items: center;
+                width:
+                    calc(100% - 44px);
+
+                flex-direction: column;
+
                 text-align: center;
             }
 
-            .footer-links {
-                justify-content: center;
-            }
-
             .mobile-nav {
-                padding: 20px 22px 40px;
-            }
-
-            .mobile-nav a {
-                font-size: 16px;
-            }
-
-            .slide-indicators {
-                bottom: 15px;
-                gap: 7px;
-            }
-
-            .slide-indicators .dot {
-                width: 6px;
-                height: 6px;
-            }
-
-            .slide-indicators .dot.active {
-                width: 20px;
-            }
-
-            .slide-counter {
-                display: none;
+                padding:
+                    20px
+                    22px
+                    40px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- =====================================================
          HEADER
-    ========================= -->
+    ===================================================== -->
+
     <header>
+
         <nav class="nav">
-            <a href="#home" class="brand">
-                <img src="logo.png" alt="TECVEDEA Logo" />
-                <span>TECVEDEA</span>
+
+            <a
+                href="#home"
+                class="brand"
+            >
+                <img
+                    src="logo.png"
+                    alt="TECVEDEA Logo"
+                >
+
+                <span>
+                    TECVEDEA
+                </span>
             </a>
 
+
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#focus">Focus</a>
-                <a href="#future">Future</a>
-                <a href="#work">Work</a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#focus">
+                    Focus
+                </a>
+
+                <a href="#future">
+                    Future
+                </a>
+
+                <a href="#work">
+                    Work
+                </a>
+
             </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
+
         </nav>
 
-        <!-- Mobile nav -->
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#about">About</a>
-            <a href="#focus">Focus</a>
-            <a href="#future">Future</a>
-            <a href="#work">Work</a>
+
+        <div
+            class="mobile-nav"
+            id="mobileNav"
+        >
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#focus">
+                Focus
+            </a>
+
+            <a href="#future">
+                Future
+            </a>
+
+            <a href="#work">
+                Work
+            </a>
+
         </div>
+
     </header>
 
-    <!-- =========================
+
+
+    <!-- =====================================================
          MAIN
-    ========================= -->
+    ===================================================== -->
+
     <main>
 
-        <!-- HERO with Slideshow -->
-        <section class="hero" id="home">
-            <!-- Slideshow Background -->
-            <div class="hero-slideshow" id="heroSlideshow">
-                <!-- Slides will be injected by JavaScript -->
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+
+            <!-- Background images -->
+
+            <div
+                class="hero-slideshow"
+                id="heroSlideshow"
+            >
             </div>
+
 
             <div class="container">
+
                 <div class="hero-content">
-                    <img src="logo.png" alt="TECVEDEA Logo" class="hero-logo" />
 
-                    <div class="hero-text-content" id="heroTextContent">
-                        <div class="hero-slide-label" id="slideLabel">Artificial Intelligence</div>
+
+                    <!-- STATIC TECVEDEA LOGO -->
+
+                    <img
+                        src="logo.png"
+                        alt="TECVEDEA Logo"
+                        class="hero-logo"
+                    >
+
+
+                    <div
+                        class="hero-text-content"
+                        id="heroTextContent"
+                    >
+
+                        <div
+                            class="hero-slide-label active"
+                            id="slideLabel"
+                        >
+                            Artificial Intelligence
+                        </div>
+
+
                         <h1>
-                            <span class="slide-title active" id="slideTitle">
-                                Building the <span>Future</span>
+
+                            <span
+                                class="slide-title active"
+                                id="slideTitle"
+                            >
+                                Building the
+                                <span>Future</span>
                             </span>
+
                         </h1>
-                        <p class="hero-slide-description" id="slideDescription">
-                            Developing advanced AI systems, machine learning technologies,
-                            and intelligent software solutions that transform industries.
+
+
+                        <p
+                            class="hero-slide-description active"
+                            id="slideDescription"
+                        >
+                            Developing advanced AI systems,
+                            intelligent software, and digital
+                            technologies for the future.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
 
-            <!-- Slide Counter -->
+
+            <!-- Counter -->
+
             <div class="slide-counter">
-                <span class="current" id="slideCurrent">01</span>
-                <span class="total"> / 24</span>
+
+                <span
+                    class="current"
+                    id="slideCurrent"
+                >
+                    01
+                </span>
+
+                <span>
+                    /
+                    <span id="slideTotal">
+                        06
+                    </span>
+                </span>
+
             </div>
 
-            <!-- Slide Indicators -->
-            <div class="slide-indicators" id="slideIndicators"></div>
+
+            <!-- Indicators -->
+
+            <div
+                class="slide-indicators"
+                id="slideIndicators"
+            >
+            </div>
+
+
         </section>
 
-        <!-- ABOUT -->
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================= -->
+
         <section id="about">
+
             <div class="container">
+
                 <div class="about-grid">
+
+
                     <div class="reveal">
-                        <div class="eyebrow">About TECVEDEA</div>
+
+                        <div class="eyebrow">
+                            About TECVEDEA
+                        </div>
+
                         <h2 class="section-title">
                             Built for long-term innovation.
                         </h2>
+
                     </div>
+
+
                     <div class="about-copy reveal">
+
                         <p>
-                            TECVEDEA is an innovation group focused on
-                            building technology, developing ideas, and
-                            creating ventures with a long-term perspective.
+                            TECVEDEA is a global innovation group
+                            focused on creating technology,
+                            developing ideas, and building ventures
+                            with a long-term perspective.
                         </p>
+
                         <p>
-                            Today, our work is focused on artificial
-                            intelligence, software, and digital technology.
+                            Today, our active work is focused on
+                            artificial intelligence, software,
+                            and digital technology.
                         </p>
+
                         <p>
-                            As the organization develops, new capabilities,
-                            projects, and ventures may extend into additional
-                            industries and disciplines.
+                            Over time, TECVEDEA may explore
+                            additional industries and disciplines
+                            through new technologies, projects,
+                            and ventures.
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- CURRENT FOCUS -->
+
+
+        <!-- =================================================
+             CURRENT FOCUS
+        ================================================= -->
+
         <section id="focus">
+
             <div class="container">
+
+
                 <div class="reveal">
-                    <div class="eyebrow">Current Focus</div>
+
+                    <div class="eyebrow">
+                        Current Focus
+                    </div>
+
                     <h2 class="section-title">
                         Where we are building today.
                     </h2>
+
                     <p class="section-description">
-                        TECVEDEA currently focuses on AI, software, and
-                        digital technology.
+                        TECVEDEA currently focuses on AI,
+                        software, and digital technology.
                     </p>
+
                 </div>
+
 
                 <div class="focus-grid">
-                    <div class="focus-item reveal">
-                        <div class="focus-number">01</div>
-                        <h3>Artificial Intelligence</h3>
-                        <p>
-                            Developing AI systems, intelligent software,
-                            machine learning technologies, and related
-                            computational solutions.
-                        </p>
-                    </div>
+
 
                     <div class="focus-item reveal">
-                        <div class="focus-number">02</div>
-                        <h3>Software</h3>
+
+                        <div class="focus-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Artificial Intelligence
+                        </h3>
+
                         <p>
-                            Building software, applications, platforms,
-                            tools, and digital products.
+                            Developing AI systems, machine
+                            learning technologies, intelligent
+                            software, and computational solutions.
                         </p>
+
                     </div>
 
+
                     <div class="focus-item reveal">
-                        <div class="focus-number">03</div>
-                        <h3>Digital Technology</h3>
+
+                        <div class="focus-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Software
+                        </h3>
+
                         <p>
-                            Exploring digital systems, infrastructure,
-                            automation, and emerging technology.
+                            Building applications, platforms,
+                            tools, services, and digital products.
                         </p>
+
                     </div>
+
+
+                    <div class="focus-item reveal">
+
+                        <div class="focus-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Digital Technology
+                        </h3>
+
+                        <p>
+                            Exploring digital systems,
+                            infrastructure, automation, and
+                            emerging technologies.
+                        </p>
+
+                    </div>
+
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- FUTURE AREAS -->
+
+
+        <!-- =================================================
+             FUTURE AREAS
+        ================================================= -->
+
         <section id="future">
+
             <div class="container">
+
+
                 <div class="future-intro">
+
+
                     <div class="reveal">
-                        <div class="eyebrow">Future Areas of Exploration</div>
+
+                        <div class="eyebrow">
+                            Future Areas of Exploration
+                        </div>
+
                         <h2 class="section-title">
                             Beyond today's focus.
                         </h2>
+
                     </div>
+
+
                     <p class="future-note reveal">
-                        These areas represent potential directions for
-                        future exploration and ventures. They are not
-                        presented as current operations.
+
+                        These areas represent potential future
+                        directions for exploration and ventures.
+                        They are not presented as current
+                        operations.
+
                     </p>
+
+
                 </div>
+
 
                 <div class="future-list">
-                    <div class="future-item reveal">Healthcare</div>
-                    <div class="future-item reveal">Agriculture & Farming</div>
-                    <div class="future-item reveal">Space</div>
-                    <div class="future-item reveal">Robotics</div>
-                    <div class="future-item reveal">Aerospace</div>
-                    <div class="future-item reveal">Drones</div>
-                    <div class="future-item reveal">Construction</div>
-                    <div class="future-item reveal">Manufacturing</div>
-                    <div class="future-item reveal">Transportation</div>
-                    <div class="future-item reveal">Semiconductors & Chips</div>
-                    <div class="future-item reveal">Energy</div>
-                    <div class="future-item reveal">Automotive</div>
-                    <div class="future-item reveal">Banking & Finance</div>
-                    <div class="future-item reveal">Education</div>
-                    <div class="future-item reveal">Media</div>
-                    <div class="future-item reveal">Food & Beverage</div>
-                    <div class="future-item reveal">Clothing & Apparel</div>
-                    <div class="future-item reveal">Real Estate</div>
-                    <div class="future-item reveal">Infrastructure</div>
-                    <div class="future-item reveal">Industrial Technology</div>
-                    <div class="future-item reveal">Biotechnology</div>
-                    <div class="future-item reveal">Consumer Products</div>
-                    <div class="future-item reveal">Telecommunications</div>
-                    <div class="future-item reveal">Defense & Security</div>
+
+
+                    <div class="future-item reveal">
+                        Healthcare
+                    </div>
+
+                    <div class="future-item reveal">
+                        Agriculture & Farming
+                    </div>
+
+                    <div class="future-item reveal">
+                        Space
+                    </div>
+
+                    <div class="future-item reveal">
+                        Robotics
+                    </div>
+
+                    <div class="future-item reveal">
+                        Aerospace
+                    </div>
+
+                    <div class="future-item reveal">
+                        Drones
+                    </div>
+
+                    <div class="future-item reveal">
+                        Construction
+                    </div>
+
+                    <div class="future-item reveal">
+                        Manufacturing
+                    </div>
+
+                    <div class="future-item reveal">
+                        Transportation
+                    </div>
+
+                    <div class="future-item reveal">
+                        Semiconductors & Chips
+                    </div>
+
+                    <div class="future-item reveal">
+                        Energy
+                    </div>
+
+                    <div class="future-item reveal">
+                        Automotive
+                    </div>
+
+                    <div class="future-item reveal">
+                        Banking & Finance
+                    </div>
+
+                    <div class="future-item reveal">
+                        Education
+                    </div>
+
+                    <div class="future-item reveal">
+                        Media
+                    </div>
+
+                    <div class="future-item reveal">
+                        Food & Beverage
+                    </div>
+
+                    <div class="future-item reveal">
+                        Clothing & Apparel
+                    </div>
+
+                    <div class="future-item reveal">
+                        Real Estate
+                    </div>
+
+                    <div class="future-item reveal">
+                        Infrastructure
+                    </div>
+
+                    <div class="future-item reveal">
+                        Industrial Technology
+                    </div>
+
+                    <div class="future-item reveal">
+                        Biotechnology
+                    </div>
+
+                    <div class="future-item reveal">
+                        Consumer Products
+                    </div>
+
+                    <div class="future-item reveal">
+                        Telecommunications
+                    </div>
+
+                    <div class="future-item reveal">
+                        Defense & Security
+                    </div>
+
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- WORK -->
+
+
+        <!-- =================================================
+             WORK
+        ================================================= -->
+
         <section id="work">
+
             <div class="container">
+
+
                 <div class="reveal">
-                    <div class="eyebrow">Work & Initiatives</div>
+
+                    <div class="eyebrow">
+                        Work & Initiatives
+                    </div>
+
                     <h2 class="section-title">
                         Building from the ground up.
                     </h2>
+
                     <p class="section-description">
-                        Current projects and initiatives will be presented
-                        here as they are developed and officially established.
+                        Current projects and initiatives will be
+                        presented here as they are developed and
+                        officially established.
                     </p>
+
                 </div>
+
 
                 <div class="work-list">
+
+
                     <div class="work-item reveal">
+
                         <div>
-                            <h3>DEEPBYTO</h3>
+
+                            <h3>
+                                DEEPBYTO
+                            </h3>
+
                             <p>
-                                An AI and software innovation initiative
-                                focused on developing technology and
-                                digital solutions.
+                                An AI and software innovation
+                                initiative focused on developing
+                                technology and digital solutions.
                             </p>
+
                         </div>
-                        <div class="work-type">Current Initiative</div>
+
+
+                        <div class="work-type">
+                            Current Initiative
+                        </div>
+
                     </div>
 
-                    <div class="work-item placeholder reveal">
+
+                    <div class="work-item reveal">
+
                         <div>
-                            <h3>Future Ventures</h3>
+
+                            <h3>
+                                Future Ventures
+                            </h3>
+
                             <p>
-                                New ventures and projects will be added
-                                as they are developed and officially launched.
+                                New ventures and projects will be
+                                added as they are developed and
+                                officially launched.
                             </p>
+
                         </div>
-                        <div class="work-type">Future</div>
+
+
+                        <div class="work-type">
+                            Future
+                        </div>
+
                     </div>
+
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- VISION -->
+
+
+        <!-- =================================================
+             VISION
+        ================================================= -->
+
         <section class="vision">
+
             <div class="container">
+
                 <div class="reveal">
-                    <div class="eyebrow">Long-Term Vision</div>
+
+                    <div class="eyebrow">
+                        Long-Term Vision
+                    </div>
+
                     <h2 class="vision-title">
-                        Build technology that
-                        <span>outlasts the moment.</span>
+
+                        Building technology that
+
+                        <span>
+                            outlasts the moment.
+                        </span>
+
                     </h2>
+
                 </div>
+
             </div>
+
         </section>
+
 
     </main>
 
-    <!-- =========================
+
+
+    <!-- =====================================================
          FOOTER
-    ========================= -->
+    ===================================================== -->
+
     <footer>
+
         <div class="footer-inner">
-            <div class="footer-brand">TECVEDEA</div>
-            <div class="footer-copy">© 2026 TECVEDEA</div>
-            <div class="footer-links">
-                <a href="https://github.com/TECVEDEA-Group" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://x.com/tecvedea" target="_blank" rel="noopener">X</a>
+
+
+            <div class="footer-brand">
+                TECVEDEA
             </div>
+
+
+            <div class="footer-copy">
+                © 2026 TECVEDEA
+            </div>
+
+
+            <div class="footer-links">
+
+                <a
+                    href="https://github.com/TECVEDEA-Group"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://x.com/tecvedea"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    X
+                </a>
+
+            </div>
+
+
         </div>
+
     </footer>
 
-    <!-- =========================
-         SCRIPTS
-    ========================= -->
-    <script>
-        // ---------- HERO SLIDESHOW DATA ----------
-        const slideshowData = [{
-            label: 'Artificial Intelligence',
-            title: 'Building the <span>Future</span>',
-            description: 'Developing advanced AI systems, machine learning technologies, and intelligent software solutions that transform industries.',
-            image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&q=80'
-        }, {
-            label: 'Software Development',
-            title: 'Coding the <span>Digital World</span>',
-            description: 'Creating innovative software, applications, platforms, and digital products that solve complex problems and drive progress.',
-            image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80'
-        }, {
-            label: 'Digital Technology',
-            title: 'Powering the <span>Digital Age</span>',
-            description: 'Exploring digital systems, infrastructure, automation, and emerging technologies that shape the future of connectivity.',
-            image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80'
-        }, {
-            label: 'Healthcare',
-            title: 'Revolutionizing <span>Healthcare</span>',
-            description: 'Transforming patient care, medical research, and health systems through innovative technology and intelligent solutions.',
-            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80'
-        }, {
-            label: 'Space Exploration',
-            title: 'Exploring the <span>Cosmos</span>',
-            description: 'Pioneering space technologies, satellite systems, and exploration solutions that push humanity beyond Earth\'s boundaries.',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80'
-        }, {
-            label: 'Robotics',
-            title: 'Building the <span>Robotic Future</span>',
-            description: 'Developing advanced robotics, automation systems, and intelligent machines that enhance productivity and human capability.',
-            image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600&q=80'
-        }, {
-            label: 'Agriculture & Farming',
-            title: 'Feeding the <span>World</span>',
-            description: 'Revolutionizing agriculture with smart farming technologies, precision agriculture, and sustainable food production systems.',
-            image: 'https://images.unsplash.com/photo-1592982537447-6f2a6a0c7f1c?w=1600&q=80'
-        }, {
-            label: 'Energy',
-            title: 'Powering a <span>Sustainable Future</span>',
-            description: 'Developing clean energy technologies, renewable solutions, and efficient power systems for a sustainable tomorrow.',
-            image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1600&q=80'
-        }, {
-            label: 'Construction',
-            title: 'Building <span>Tomorrow</span>',
-            description: 'Innovating construction technologies, smart materials, and automated building systems for modern infrastructure development.',
-            image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=80'
-        }, {
-            label: 'Manufacturing',
-            title: 'Transforming <span>Industry</span>',
-            description: 'Revolutionizing manufacturing with smart factories, automation, and advanced production technologies for the future.',
-            image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80'
-        }, {
-            label: 'Transportation',
-            title: 'Moving the <span>World</span>',
-            description: 'Creating intelligent transportation systems, autonomous vehicles, and innovative mobility solutions for connected cities.',
-            image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1600&q=80'
-        }, {
-            label: 'Semiconductors & Chips',
-            title: 'Powering the <span>Digital Brain</span>',
-            description: 'Advancing semiconductor technology, processor design, and chip manufacturing for next-generation computing systems.',
-            image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=1600&q=80'
-        }, {
-            label: 'Biotechnology',
-            title: 'Innovating <span>Life Sciences</span>',
-            description: 'Pioneering biotech solutions, genetic research, and biological innovations that improve human health and environmental sustainability.',
-            image: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?w=1600&q=80'
-        }, {
-            label: 'Telecommunications',
-            title: 'Connecting the <span>World</span>',
-            description: 'Building next-generation communication networks, 5G technology, and global connectivity solutions for a hyper-connected future.',
-            image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80'
-        }, {
-            label: 'Automotive',
-            title: 'Driving the <span>Future</span>',
-            description: 'Engineering innovative automotive solutions, electric vehicles, and autonomous driving technologies for sustainable mobility.',
-            image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80'
-        }, {
-            label: 'Aerospace',
-            title: 'Reaching New <span>Frontiers</span>',
-            description: 'Developing advanced aerospace technologies, aircraft innovations, and aviation systems for the future of flight.',
-            image: 'https://images.unsplash.com/photo-1485686531765-ba63b07845a1?w=1600&q=80'
-        }, {
-            label: 'Banking & Finance',
-            title: 'Reshaping <span>Finance</span>',
-            description: 'Transforming banking, financial services, and investment systems through digital innovation, fintech, and intelligent solutions.',
-            image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80'
-        }, {
-            label: 'Education',
-            title: 'Empowering <span>Learning</span>',
-            description: 'Revolutionizing education with edtech, digital learning platforms, and innovative tools that make knowledge accessible to all.',
-            image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80'
-        }, {
-            label: 'Media',
-            title: 'Creating <span>Content</span>',
-            description: 'Transforming media and entertainment with innovative content production, distribution platforms, and interactive experiences.',
-            image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1600&q=80'
-        }, {
-            label: 'Real Estate',
-            title: 'Building <span>Communities</span>',
-            description: 'Innovating real estate with smart building technologies, sustainable construction, and intelligent property management solutions.',
-            image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1600&q=80'
-        }, {
-            label: 'Defense & Security',
-            title: 'Protecting the <span>Future</span>',
-            description: 'Developing advanced security technologies, defense systems, and protective solutions for a safer, more secure world.',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80'
-        }, {
-            label: 'Consumer Products',
-            title: 'Designing <span>Tomorrow</span>',
-            description: 'Creating innovative consumer products that enhance everyday life through smart design, technology, and user-centered solutions.',
-            image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1600&q=80'
-        }, {
-            label: 'Food & Beverage',
-            title: 'Sustaining the <span>World</span>',
-            description: 'Transforming food and beverage industries with innovative production methods, sustainability, and smart food technology.',
-            image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80'
-        }, {
-            label: 'Clothing & Apparel',
-            title: 'Fashioning the <span>Future</span>',
-            description: 'Revolutionizing fashion and apparel with sustainable materials, innovative production, and smart textile technology.',
-            image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1600&q=80'
-        }];
 
-        // ---------- DOM REFERENCES ----------
-        const slideshowContainer = document.getElementById('heroSlideshow');
-        const indicatorsContainer = document.getElementById('slideIndicators');
-        const slideLabel = document.getElementById('slideLabel');
-        const slideTitle = document.getElementById('slideTitle');
-        const slideDescription = document.getElementById('slideDescription');
-        const slideCurrent = document.getElementById('slideCurrent');
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* =====================================================
+           HERO SLIDES
+        ===================================================== */
+
+        const slideshowData = [
+
+            {
+                label: "Artificial Intelligence",
+
+                title:
+                    "Building the <span>Future</span>",
+
+                description:
+                    "Developing advanced AI systems, intelligent software, and digital technologies for the future.",
+
+                image:
+                    "images/hero-01.jpg"
+            },
+
+
+            {
+                label: "Software",
+
+                title:
+                    "Engineering the <span>Digital World</span>",
+
+                description:
+                    "Creating software, platforms, applications, and digital products designed to solve real-world problems.",
+
+                image:
+                    "images/hero-02.jpg"
+            },
+
+
+            {
+                label: "Digital Technology",
+
+                title:
+                    "Powering the <span>Digital Age</span>",
+
+                description:
+                    "Exploring digital infrastructure, automation, intelligent systems, and emerging technologies.",
+
+                image:
+                    "images/hero-03.jpg"
+            },
+
+
+            {
+                label: "Computing",
+
+                title:
+                    "Advancing <span>Computation</span>",
+
+                description:
+                    "Exploring the systems, infrastructure, and computing technologies that enable the next generation of innovation.",
+
+                image:
+                    "images/hero-04.jpg"
+            },
+
+
+            {
+                label: "Innovation",
+
+                title:
+                    "Creating What Comes <span>Next</span>",
+
+                description:
+                    "Turning ideas into technologies, products, and ventures with a long-term perspective.",
+
+                image:
+                    "images/hero-05.jpg"
+            },
+
+
+            {
+                label: "Long-Term Vision",
+
+                title:
+                    "Across Every <span>Industry</span>",
+
+                description:
+                    "TECVEDEA's long-term vision extends beyond today's focus toward a broader technology-driven ecosystem.",
+
+                image:
+                    "images/hero-06.jpg"
+            }
+
+        ];
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const slideshowContainer =
+            document.getElementById(
+                "heroSlideshow"
+            );
+
+        const indicatorsContainer =
+            document.getElementById(
+                "slideIndicators"
+            );
+
+        const slideLabel =
+            document.getElementById(
+                "slideLabel"
+            );
+
+        const slideTitle =
+            document.getElementById(
+                "slideTitle"
+            );
+
+        const slideDescription =
+            document.getElementById(
+                "slideDescription"
+            );
+
+        const slideCurrent =
+            document.getElementById(
+                "slideCurrent"
+            );
+
+        const slideTotal =
+            document.getElementById(
+                "slideTotal"
+            );
+
+
+        /* =====================================================
+           SETTINGS
+
+           5 SECONDS
+        ===================================================== */
+
+        const INTERVAL_MS = 5000;
+
 
         let currentSlide = 0;
-        let slideInterval;
+
+        let slideInterval = null;
+
         let isTransitioning = false;
-        const INTERVAL_MS = 2000;
 
-        // ---------- CREATE SLIDES ----------
-        slideshowData.forEach((item, index) => {
-            const slide = document.createElement('div');
-            slide.className = `slide ${index === 0 ? 'active' : ''}`;
-            slide.style.backgroundImage = `url(${item.image})`;
-            slideshowContainer.appendChild(slide);
 
-            const dot = document.createElement('span');
-            dot.className = `dot ${index === 0 ? 'active' : ''}`;
-            dot.setAttribute('data-index', index);
-            dot.addEventListener('click', () => goToSlide(index));
-            indicatorsContainer.appendChild(dot);
-        });
+        /* =====================================================
+           TOTAL
+        ===================================================== */
 
-        // ---------- SLIDE TRANSITION ----------
-        function goToSlide(index) {
-            if (isTransitioning || index === currentSlide) return;
-            isTransitioning = true;
+        slideTotal.textContent =
+            String(
+                slideshowData.length
+            ).padStart(2, "0");
 
-            const slides = slideshowContainer.querySelectorAll('.slide');
-            const dots = indicatorsContainer.querySelectorAll('.dot');
 
-            // Remove active from all slides
-            slides.forEach((s) => s.classList.remove('active'));
+        /* =====================================================
+           CREATE BACKGROUND SLIDES
+        ===================================================== */
 
-            // Add active to target slide
-            slides[index].classList.add('active');
+        slideshowData.forEach(
+            (item, index) => {
 
-            // Update dots
-            dots.forEach((d, i) => {
-                d.classList.toggle('active', i === index);
-            });
+                const slide =
+                    document.createElement(
+                        "div"
+                    );
 
-            // Update text content with animation
-            const data = slideshowData[index];
+                slide.className =
+                    "slide" +
+                    (
+                        index === 0
+                            ? " active"
+                            : ""
+                    );
 
-            // Fade out text
-            slideLabel.classList.remove('active');
-            slideTitle.classList.remove('active');
-            slideDescription.classList.remove('active');
+                slide.style.backgroundImage =
+                    `url("${item.image}")`;
 
-            setTimeout(() => {
-                // Update content
-                slideLabel.textContent = data.label;
-                slideTitle.innerHTML = data.title;
-                slideDescription.textContent = data.description;
+                slideshowContainer.appendChild(
+                    slide
+                );
 
-                // Update counter
-                slideCurrent.textContent = String(index + 1).padStart(2, '0');
 
-                // Fade in text
-                slideLabel.classList.add('active');
-                slideTitle.classList.add('active');
-                slideDescription.classList.add('active');
+                /* Indicator */
 
-                currentSlide = index;
-                isTransitioning = false;
-            }, 400);
-        }
+                const dot =
+                    document.createElement(
+                        "span"
+                    );
 
-        // ---------- NEXT SLIDE ----------
-        function nextSlide() {
-            const next = (currentSlide + 1) % slideshowData.length;
-            goToSlide(next);
-        }
+                dot.className =
+                    "dot" +
+                    (
+                        index === 0
+                            ? " active"
+                            : ""
+                    );
 
-        // ---------- START / STOP ----------
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, INTERVAL_MS);
-        }
+                dot.dataset.index =
+                    index;
 
-        function resetSlideshow() {
-            clearInterval(slideInterval);
-            startSlideshow();
-        }
+                dot.addEventListener(
+                    "click",
+                    () => {
 
-        // ---------- INIT ----------
-        // Set initial text content
-        const initialData = slideshowData[0];
-        slideLabel.textContent = initialData.label;
-        slideTitle.innerHTML = initialData.title;
-        slideDescription.textContent = initialData.description;
-        slideCurrent.textContent = '01';
+                        goToSlide(index);
 
-        // Start
-        startSlideshow();
+                        resetSlideshow();
 
-        // ---------- PAUSE ON HOVER ----------
-        const heroSection = document.querySelector('.hero');
-        heroSection.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-        heroSection.addEventListener('mouseleave', () => {
-            startSlideshow();
-        });
-
-        // ---------- MOBILE MENU ----------
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('open');
-        });
-
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('open');
-            });
-        });
-
-        // ---------- SCROLL REVEAL ----------
-        const reveals = document.querySelectorAll('.reveal');
-
-        const revealObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
                     }
-                });
-            }, {
-                threshold: 0.15,
-                rootMargin: '0px 0px -40px 0px'
+                );
+
+                indicatorsContainer.appendChild(
+                    dot
+                );
+
             }
         );
 
-        reveals.forEach(el => revealObserver.observe(el));
+
+        /* =====================================================
+           CHANGE SLIDE
+        ===================================================== */
+
+        function goToSlide(index) {
+
+            if (
+                isTransitioning ||
+                index === currentSlide
+            ) {
+                return;
+            }
+
+            isTransitioning = true;
+
+
+            const slides =
+                slideshowContainer.querySelectorAll(
+                    ".slide"
+                );
+
+            const dots =
+                indicatorsContainer.querySelectorAll(
+                    ".dot"
+                );
+
+
+            /* Background */
+
+            slides.forEach(
+                slide => {
+
+                    slide.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            slides[index].classList.add(
+                "active"
+            );
+
+
+            /* Indicators */
+
+            dots.forEach(
+                (dot, i) => {
+
+                    dot.classList.toggle(
+                        "active",
+                        i === index
+                    );
+
+                }
+            );
+
+
+            /* Fade text out */
+
+            slideLabel.classList.remove(
+                "active"
+            );
+
+            slideTitle.classList.remove(
+                "active"
+            );
+
+            slideDescription.classList.remove(
+                "active"
+            );
+
+
+            setTimeout(
+                () => {
+
+                    const data =
+                        slideshowData[index];
+
+
+                    /* Update content */
+
+                    slideLabel.textContent =
+                        data.label;
+
+                    slideTitle.innerHTML =
+                        data.title;
+
+                    slideDescription.textContent =
+                        data.description;
+
+
+                    slideCurrent.textContent =
+                        String(
+                            index + 1
+                        ).padStart(
+                            2,
+                            "0"
+                        );
+
+
+                    /* Fade text in */
+
+                    slideLabel.classList.add(
+                        "active"
+                    );
+
+                    slideTitle.classList.add(
+                        "active"
+                    );
+
+                    slideDescription.classList.add(
+                        "active"
+                    );
+
+
+                    currentSlide =
+                        index;
+
+                    isTransitioning =
+                        false;
+
+                },
+                400
+            );
+
+        }
+
+
+        /* =====================================================
+           NEXT
+        ===================================================== */
+
+        function nextSlide() {
+
+            const next =
+                (
+                    currentSlide + 1
+                ) %
+                slideshowData.length;
+
+            goToSlide(next);
+
+        }
+
+
+        /* =====================================================
+           START
+        ===================================================== */
+
+        function startSlideshow() {
+
+            clearInterval(
+                slideInterval
+            );
+
+            slideInterval =
+                setInterval(
+                    nextSlide,
+                    INTERVAL_MS
+                );
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        function resetSlideshow() {
+
+            clearInterval(
+                slideInterval
+            );
+
+            startSlideshow();
+
+        }
+
+
+        /* =====================================================
+           INITIAL CONTENT
+        ===================================================== */
+
+        const firstSlide =
+            slideshowData[0];
+
+
+        slideLabel.textContent =
+            firstSlide.label;
+
+        slideTitle.innerHTML =
+            firstSlide.title;
+
+        slideDescription.textContent =
+            firstSlide.description;
+
+
+        slideCurrent.textContent =
+            "01";
+
+
+        /* Start slideshow */
+
+        startSlideshow();
+
+
+        /* =====================================================
+           PAUSE WHEN MOUSE IS OVER HERO
+        =====================================================
+
+        IMPORTANT:
+        Desktop par hover karne se timer temporarily pause
+        hoga. Mouse bahar nikalne par 5-second timer dobara
+        start ho jayega.
+        */
+
+        const heroSection =
+            document.querySelector(
+                ".hero"
+            );
+
+
+        heroSection.addEventListener(
+            "mouseenter",
+            () => {
+
+                clearInterval(
+                    slideInterval
+                );
+
+            }
+        );
+
+
+        heroSection.addEventListener(
+            "mouseleave",
+            () => {
+
+                startSlideshow();
+
+            }
+        );
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        const hamburger =
+            document.getElementById(
+                "hamburger"
+            );
+
+        const mobileNav =
+            document.getElementById(
+                "mobileNav"
+            );
+
+
+        hamburger.addEventListener(
+            "click",
+            () => {
+
+                hamburger.classList.toggle(
+                    "active"
+                );
+
+                mobileNav.classList.toggle(
+                    "open"
+                );
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(
+                ".mobile-nav a"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        () => {
+
+                            hamburger.classList.remove(
+                                "active"
+                            );
+
+                            mobileNav.classList.remove(
+                                "open"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        const reveals =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.15,
+
+                    rootMargin:
+                        "0px 0px -40px 0px"
+                }
+
+            );
+
+
+        reveals.forEach(
+            element => {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
     </script>
 
 </body>

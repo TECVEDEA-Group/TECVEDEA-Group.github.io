@@ -7,7 +7,7 @@
     <title>TECVEDEA — Building the Future Across Every Industry.</title>
 
     <meta name="description"
-        content="A global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines.">
+        content="TECVEDEA is a global innovation group creating and advancing ideas, technologies, and ventures across industries and disciplines.">
 
     <meta name="theme-color" content="#000000">
 
@@ -78,7 +78,6 @@
             letter-spacing: 2.5px;
         }
 
-        /* Navbar logo — STATIC */
         .brand img {
             width: 36px;
             height: 36px;
@@ -160,7 +159,6 @@
             max-width: 1120px;
         }
 
-        /* HOME LOGO — FAST WHEEL ROTATION */
         .hero-logo {
             width: 150px;
             height: 150px;
@@ -168,20 +166,7 @@
 
             margin-bottom: 52px;
 
-            animation: wheelRotate 1.5s linear infinite;
-
-            transform-origin: center center;
-            will-change: transform;
-        }
-
-        @keyframes wheelRotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+            /* STATIC LOGO — NO ANIMATION */
         }
 
         .hero h1 {
@@ -530,54 +515,37 @@
                 justify-content: center;
             }
         }
-
-        /* =========================
-           REDUCED MOTION
-        ========================= */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-                scroll-behavior: auto;
-            }
-
-            .hero-logo {
-                animation: none;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-<header>
+<!-- =========================
+     HEADER
+========================= -->
 
+<header>
     <nav class="nav">
 
         <a href="#home" class="brand">
-
-            <img
-                src="logo.png"
-                alt="TECVEDEA Logo"
-            >
-
+            <img src="logo.png" alt="TECVEDEA Logo">
             <span>TECVEDEA</span>
-
         </a>
 
         <div class="nav-links">
-
             <a href="#about">About</a>
             <a href="#focus">Focus</a>
             <a href="#future">Future</a>
             <a href="#work">Work</a>
-
         </div>
 
     </nav>
-
 </header>
 
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
@@ -589,7 +557,6 @@
 
             <div class="hero-content">
 
-                <!-- HOME LOGO ROTATES -->
                 <img
                     src="logo.png"
                     alt="TECVEDEA Logo"
@@ -624,15 +591,11 @@
             <div class="about-grid">
 
                 <div>
-
-                    <div class="eyebrow">
-                        About TECVEDEA
-                    </div>
+                    <div class="eyebrow">About TECVEDEA</div>
 
                     <h2 class="section-title">
                         Built for long-term innovation.
                     </h2>
-
                 </div>
 
                 <div class="about-copy">
@@ -669,9 +632,7 @@
 
         <div class="container">
 
-            <div class="eyebrow">
-                Current Focus
-            </div>
+            <div class="eyebrow">Current Focus</div>
 
             <h2 class="section-title">
                 Where we are building today.
@@ -682,17 +643,14 @@
                 digital technology.
             </p>
 
+
             <div class="focus-grid">
 
                 <div class="focus-item">
 
-                    <div class="focus-number">
-                        01
-                    </div>
+                    <div class="focus-number">01</div>
 
-                    <h3>
-                        Artificial Intelligence
-                    </h3>
+                    <h3>Artificial Intelligence</h3>
 
                     <p>
                         Developing AI systems, intelligent software,
@@ -705,13 +663,9 @@
 
                 <div class="focus-item">
 
-                    <div class="focus-number">
-                        02
-                    </div>
+                    <div class="focus-number">02</div>
 
-                    <h3>
-                        Software
-                    </h3>
+                    <h3>Software</h3>
 
                     <p>
                         Building software, applications, platforms,
@@ -723,13 +677,9 @@
 
                 <div class="focus-item">
 
-                    <div class="focus-number">
-                        03
-                    </div>
+                    <div class="focus-number">03</div>
 
-                    <h3>
-                        Digital Technology
-                    </h3>
+                    <h3>Digital Technology</h3>
 
                     <p>
                         Exploring digital systems, infrastructure,
@@ -814,9 +764,7 @@
 
         <div class="container">
 
-            <div class="eyebrow">
-                Work & Initiatives
-            </div>
+            <div class="eyebrow">Work & Initiatives</div>
 
             <h2 class="section-title">
                 Building from the ground up.
@@ -883,5 +831,59 @@
 
         <div class="container">
 
-            <div class="eyebrow">
-       
+            <div class="eyebrow">Long-Term Vision</div>
+
+            <h2 class="vision-title">
+                Build technology that
+                <span>outlasts the moment.</span>
+            </h2>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            TECVEDEA
+        </div>
+
+        <div class="footer-copy">
+            © 2026 TECVEDEA
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/TECVEDEA-Group"
+                target="_blank"
+                rel="noopener"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://x.com/tecvedea"
+                target="_blank"
+                rel="noopener"
+            >
+                X
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
